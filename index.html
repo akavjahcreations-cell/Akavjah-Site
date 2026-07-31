@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akavjah Creations — I don't know how to code.</title>
+<meta name="description" content="Akavjah Creations: the build log of a total coding skeptic who shipped his first iOS game, Mad Orbit Dash, to the App Store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,680;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #12172B;
+    --navy-deep: #0A0D19;
+    --paper: #F3ECDD;
+    --paper-dim: #E7DFC9;
+    --ink: #1C2033;
+    --ink-soft: #4A4E63;
+    --gold: #E8A33D;
+    --gold-bright: #F4BE66;
+    --teal: #5FC9BD;
+    --line: rgba(243,236,221,0.14);
+    --line-paper: rgba(28,32,51,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--navy);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;letter-spacing:-0.01em;}
+  p{margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  img{max-width:100%;}
+
+  /* subtle starfield */
+  .stars{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.5;
+    background-image:
+      radial-gradient(1.5px 1.5px at 20% 30%, rgba(243,236,221,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 70% 65%, rgba(243,236,221,0.35), transparent),
+      radial-gradient(1px 1px at 85% 20%, rgba(243,236,221,0.4), transparent),
+      radial-gradient(1.5px 1.5px at 45% 80%, rgba(243,236,221,0.3), transparent),
+      radial-gradient(1px 1px at 10% 70%, rgba(243,236,221,0.45), transparent),
+      radial-gradient(1px 1px at 60% 10%, rgba(243,236,221,0.3), transparent);
+    background-size:600px 600px;
+  }
+
+  /* ===== NAV ===== */
+  nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;
+    padding:26px 28px;max-width:1080px;margin:0 auto;}
+  .brand{font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:var(--paper);
+    text-decoration:none;display:flex;align-items:center;gap:9px;}
+  .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);}
+  nav .links{display:flex;gap:28px;font-size:14px;}
+  nav .links a{text-decoration:none;color:var(--paper);opacity:0.75;transition:opacity .2s;}
+  nav .links a:hover{opacity:1;}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;z-index:1;padding:64px 0 40px;}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-bright);
+    letter-spacing:0.06em;margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--gold-bright);display:inline-block;}
+  .hero h1{font-size:clamp(38px,6vw,70px);font-weight:680;line-height:1.03;color:var(--paper);max-width:780px;}
+  .hero h1 em{font-style:italic;color:var(--teal);font-weight:500;}
+  .hero .sub{margin-top:26px;font-size:19px;line-height:1.6;color:rgba(243,236,221,0.72);max-width:560px;}
+  .hero-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{font-family:'Inter',sans-serif;font-weight:600;font-size:15px;padding:14px 26px;border-radius:100px;
+    text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s, box-shadow .2s;}
+  .btn-primary{background:var(--gold);color:var(--navy-deep);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,163,61,0.28);}
+  .btn-ghost{border:1px solid var(--line);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--paper);}
+
+  /* ===== ORBIT DIAGRAM ===== */
+  .orbit-stage{position:relative;z-index:1;height:min(640px,90vw);max-width:640px;margin:56px auto 0;
+    display:flex;align-items:center;justify-content:center;}
+  .orbit-ring{position:absolute;border:1px solid var(--line);border-radius:50%;}
+  .r1{width:22%;height:22%;}
+  .r2{width:44%;height:44%;border-style:dashed;}
+  .r3{width:66%;height:66%;}
+  .r4{width:88%;height:88%;border-style:dashed;}
+  .r5{width:100%;height:100%;}
+  .hub{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 22px 4px rgba(232,163,61,0.45);}
+  .orbiter{position:absolute;width:100%;height:100%;animation:spin 22s linear infinite;}
+  @media (prefers-reduced-motion: reduce){.orbiter{animation:none;}}
+  @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  .dot{position:absolute;top:0;left:50%;width:11px;height:11px;margin-left:-5.5px;margin-top:-5.5px;
+    border-radius:50%;background:var(--teal);box-shadow:0 0 14px 3px rgba(95,201,189,0.6);}
+
+  .milestone{position:absolute;display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;
+    font-size:12px;color:rgba(243,236,221,0.85);white-space:nowrap;}
+  .milestone .num{width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:flex;
+    align-items:center;justify-content:center;font-size:10px;color:var(--gold-bright);flex-shrink:0;background:var(--navy);}
+  .m1{top:2%;left:50%;transform:translate(-50%,-100%);flex-direction:column;text-align:center;}
+  .m2{top:26%;right:0%;transform:translate(60%,-50%);}
+  .m3{bottom:26%;right:2%;transform:translate(45%,50%);}
+  .m4{bottom:2%;left:50%;transform:translate(-50%,100%);flex-direction:column;text-align:center;}
+  .m5{top:26%;left:0%;transform:translate(-60%,-50%);flex-direction:row-reverse;}
+
+  /* ===== SECTION SHARED ===== */
+  section{position:relative;z-index:1;}
+  .section-pad{padding:100px 0;}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-bright);
+    letter-spacing:0.06em;margin-bottom:16px;}
+  .section-title{font-size:clamp(28px,4vw,42px);font-weight:680;max-width:640px;line-height:1.1;}
+
+  /* ===== SKEPTIC SECTION ===== */
+  .skeptic{background:var(--navy-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .skeptic-grid{margin-top:44px;max-width:640px;}
+  .skeptic p{font-size:17px;line-height:1.75;color:rgba(243,236,221,0.78);}
+  .skeptic p + p{margin-top:18px;}
+  .quote-card{background:var(--paper);color:var(--ink);border-radius:18px;padding:34px;font-family:'Fraunces',serif;}
+  .quote-card p{font-size:22px;font-style:italic;line-height:1.5;color:var(--ink);}
+  .quote-card .attr{margin-top:20px;font-family:'JetBrains Mono',monospace;font-style:normal;font-size:13px;
+    color:var(--ink-soft);}
+
+  /* ===== BUILD LOG ===== */
+  .log{padding-top:100px;}
+  .log-list{margin-top:48px;border-top:1px solid var(--line);}
+  .log-row{display:grid;grid-template-columns:110px 28px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);
+    opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;}
+  .log-row.show{opacity:1;transform:translateY(0);}
+  .log-row .tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);padding-top:3px;}
+  .log-row .dot-col{display:flex;justify-content:center;padding-top:5px;}
+  .log-row .dot-col span{width:8px;height:8px;border-radius:50%;background:var(--gold);display:block;}
+  .log-row .msg{font-size:17px;line-height:1.5;color:rgba(243,236,221,0.9);}
+  .log-row .msg .file{font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(243,236,221,0.45);
+    display:block;margin-top:6px;}
+
+  /* ===== GAME SHOWCASE ===== */
+  .showcase{background:var(--paper);color:var(--ink);}
+  .showcase .kicker{color:#B5761F;}
+  .showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:44px;align-items:center;}
+  @media (max-width:760px){.showcase-grid{grid-template-columns:1fr;}}
+  .showcase h2{color:var(--ink);}
+  .showcase p{color:var(--ink-soft);font-size:17px;line-height:1.7;margin-top:20px;}
+  .stat-row{display:flex;gap:36px;margin-top:32px;flex-wrap:wrap;}
+  .stat b{font-family:'Fraunces',serif;font-size:30px;display:block;color:var(--ink);}
+  .stat span{font-size:13px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
+
+  /* phone mock with mini game render */
+  .phone{width:260px;aspect-ratio:9/19.5;background:var(--navy-deep);border-radius:36px;margin:0 auto;
+    border:7px solid #06070d;box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);position:relative;overflow:hidden;}
+  .phone-scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .phone-ring{position:absolute;border:2px solid rgba(95,201,189,0.5);border-radius:50%;}
+  .phone-ring.a{width:60%;height:32%;animation:collapse 3.6s ease-in-out infinite;}
+  .phone-ring.b{width:85%;height:46%;animation:collapse 3.6s ease-in-out infinite 1.2s;}
+  .phone-ring.c{width:110%;height:60%;animation:collapse 3.6s ease-in-out infinite 2.4s;}
+  @keyframes collapse{0%{opacity:0;transform:scale(1.3);}15%{opacity:1;}90%{opacity:1;transform:scale(0.55);}100%{opacity:0;transform:scale(0.5);}}
+  .phone-hub{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 16px 4px rgba(232,163,61,0.5);z-index:2;}
+  .phone-orbiter{position:absolute;width:78px;height:78px;animation:spin 3s linear infinite;}
+  .phone-orbiter .d{position:absolute;top:0;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;
+    background:var(--teal);box-shadow:0 0 10px 2px rgba(95,201,189,0.7);}
+  .phone-hud{position:absolute;top:16px;left:0;right:0;display:flex;justify-content:space-between;
+    padding:0 16px;font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(243,236,221,0.55);}
+  .phone-hud b{color:var(--paper);font-size:13px;display:block;}
+
+  /* ===== NEXT / FUTURE ===== */
+  .next{border-top:1px solid var(--line);}
+  .next-inner{display:flex;justify-content:space-between;gap:40px;align-items:flex-end;flex-wrap:wrap;}
+  .next h2{max-width:520px;}
+  .next p.lead{margin-top:18px;font-size:17px;color:rgba(243,236,221,0.72);max-width:480px;line-height:1.7;}
+  .roadmap{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 14px;border-radius:100px;
+    border:1px solid var(--line);color:rgba(243,236,221,0.7);}
+  .chip.active{border-color:var(--gold);color:var(--gold-bright);}
+
+  /* ===== FOOTER ===== */
+  footer{border-top:1px solid var(--line);padding:44px 0;}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .foot-links{display:flex;gap:26px;font-size:14px;flex-wrap:wrap;}
+  .foot-links a{text-decoration:none;color:rgba(243,236,221,0.65);}
+  .foot-links a:hover{color:var(--paper);}
+  .foot-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(243,236,221,0.4);}
+
+  @media (max-width:600px){
+    .hero{padding-top:44px;}
+    .m2,.m3,.m5{font-size:10.5px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<nav>
+  <a class="brand" href="#top"><span class="brand-dot"></span>AKAVJAH CREATIONS</a>
+  <div class="links">
+    <a href="#story">Story</a>
+    <a href="#log">Build Log</a>
+    <a href="#game">Mad Orbit Dash</a>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="eyebrow">AKAVJAH CREATIONS &nbsp;/&nbsp; ORIGIN LOG</div>
+  <h1>I have never written<br>a line of code.<br><em>I still shipped a game.</em></h1>
+  <p class="sub">Weeks ago I didn't trust "AI-built apps" as far as I could throw them.
+    Then I decided to find out the hard way — one prompt, one crash, one bug hunt at a time —
+    whether a total non-programmer could go from a blank folder to a real Apple developer account
+    in six days flat.</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#game">See Mad Orbit Dash →</a>
+    <a class="btn btn-ghost" href="#log">Read the build log</a>
+  </div>
+
+  <div class="orbit-stage" aria-hidden="true">
+    <div class="orbit-ring r1"></div>
+    <div class="orbit-ring r2"></div>
+    <div class="orbit-ring r3"></div>
+    <div class="orbit-ring r4"></div>
+    <div class="orbit-ring r5"></div>
+    <div class="hub"></div>
+    <div class="orbiter"><div class="dot"></div></div>
+
+    <div class="milestone m1"><span class="num">1</span>Skeptic</div>
+    <div class="milestone m2"><span class="num">2</span>First prompt</div>
+    <div class="milestone m3"><span class="num">3</span>First real crash</div>
+    <div class="milestone m4"><span class="num">4</span>Level 50, finally</div>
+    <div class="milestone m5"><span class="num">5</span>Submitting to Apple</div>
+  </div>
+</header>
+
+<section class="skeptic" id="story">
+  <div class="wrap section-pad">
+    <div class="kicker">WHY I DOUBTED THIS</div>
+    <h2 class="section-title">I've watched a hundred "I built an app with AI" posts. Most of them were demos, not apps.</h2>
+    <div class="skeptic-grid">
+      <div>
+        <p>I'm not a developer. I don't know Swift, I don't know Xcode, and until recently I couldn't have told you
+          what a "build target" was. Every "vibe coding" story I'd seen online stopped at a pretty screenshot —
+          nothing that actually survived contact with a real device, a real App Store review, or a real player
+          mashing the screen in ways no one planned for.</p>
+        <p>So I picked one idea small enough to finish and stubborn enough to expose every weakness in the process:
+          a one-tap arcade game where a dot orbits a hub and you dodge through collapsing rings. Simple to
+          describe. Brutal to actually get right — collision has to be exact, difficulty has to ramp fairly,
+          and one bad frame ends the run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="log" id="log">
+  <div class="wrap">
+    <div class="kicker">THE ACTUAL BUILD LOG</div>
+    <h2 class="section-title">No polish. Just what happened, in order.</h2>
+    <div class="log-list" id="logList">
+      <div class="log-row"><div class="tag">SAT</div><div class="dot-col"><span></span></div>
+        <div class="msg">Started from zero. Described the game in plain English — a dot orbiting a hub, dodging
+          gaps in collapsing rings — and watched it actually run for the first time.
+          <span class="file">first build compiled · didn't believe it either</span></div></div>
+      <div class="log-row"><div class="tag">SAT</div><div class="dot-col"><span></span></div>
+        <div class="msg">Learned the hard way that "looks right" and "is right" are different things. Collision
+          had to be checked continuously across the whole overlap zone — not just once a frame — or a visible
+          graze wouldn't register as a hit.
+          <span class="file">GameEngine.swift · collision rewrite</span></div></div>
+      <div class="log-row"><div class="tag">SUN</div><div class="dot-col"><span></span></div>
+        <div class="msg">Built a "demo mode" so the game could play itself and stress-test difficulty at levels
+          I'd never reach by hand. It kept dying suspiciously right before the finish line.
+          <span class="file">autoplay added · mystery bug logged</span></div></div>
+      <div class="log-row"><div class="tag">MON</div><div class="dot-col"><span></span></div>
+        <div class="msg">Chased that bug through 33 rounds of console logs before finding it: the game let the
+          orb pass a gate, then quietly forgot it could still die a frame later. Fixed. Demo mode finally reached
+          the top level.
+          <span class="file">33 log files · one real root cause</span></div></div>
+      <div class="log-row"><div class="tag">TUE</div><div class="dot-col"><span></span></div>
+        <div class="msg">Composed and trimmed original music and sound effects by hand — down to isolating a
+          single 0.35-second pop for the tap sound so it wouldn't echo.
+          <span class="file">audio pass · sfx_tap.wav, take 6</span></div></div>
+      <div class="log-row"><div class="tag">WED</div><div class="dot-col"><span></span></div>
+        <div class="msg">Registered a real Apple Developer account, under my real name, no studio alias to hide
+          behind — and got approved. If this failed, it was going to fail with my name on it.
+          <span class="file">developer account · approved</span></div></div>
+      <div class="log-row"><div class="tag">THU</div><div class="dot-col"><span></span></div>
+        <div class="msg">Six days in. Final testing pass underway — Mad Orbit Dash goes to Apple for review
+          within the next 24-48 hours.
+          <span class="file">status: submitting soon</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="showcase" id="game">
+  <div class="wrap section-pad">
+    <div class="kicker">THE GAME ITSELF</div>
+    <div class="showcase-grid">
+      <div>
+        <h2 class="section-title">Mad Orbit Dash</h2>
+        <p>One tap reverses your orbit. That's the whole control scheme. The rings collapse inward faster the
+          longer you survive, the gaps get tighter, and by level 40 the whole board is moving against you.
+          It's small on purpose — small enough that every rough edge was mine to find and fix.</p>
+        <div class="stat-row">
+          <div class="stat"><b>50</b><span>LEVELS TO CLEAR</span></div>
+          <div class="stat"><b>1</b><span>TAP TO PLAY</span></div>
+          <div class="stat"><b>0</b><span>LINES I WROTE MYSELF, BY HAND</span></div>
+        </div>
+        <div class="hero-cta" style="margin-top:32px;">
+          <span class="btn" style="background:var(--ink);color:var(--paper);cursor:default;">Submitting to Apple within 48 hours</span>
+        </div>
+      </div>
+      <div>
+        <div class="phone" aria-hidden="true">
+          <div class="phone-hud"><span>BEST<b>—</b></span><span style="text-align:center;">SCORE<b>—</b></span><span style="text-align:right;">PREV<b>—</b></span></div>
+          <div class="phone-scene">
+            <div class="phone-ring a"></div>
+            <div class="phone-ring b"></div>
+            <div class="phone-ring c"></div>
+            <div class="phone-hub"></div>
+            <div class="phone-orbiter"><div class="d"></div></div>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:0.03em;color:var(--ink);background:var(--paper-dim);padding:8px 12px;border-radius:8px;">
+          ⚠ FOR ILLUSTRATIVE PURPOSES ONLY — NOT ACTUAL GAMEPLAY FOOTAGE
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next">
+  <div class="wrap section-pad">
+    <div class="next-inner">
+      <div>
+        <div class="kicker">WHAT'S NEXT</div>
+        <h2>One game down. This was never meant to be the only one.</h2>
+        <p class="lead">Mad Orbit Dash was the proof of concept — that someone with zero coding background could
+          take an idea from a blank folder to a submitted app in six days. Now that I know it's possible,
+          I'm not stopping here.</p>
+      </div>
+      <div class="roadmap">
+        <span class="chip active">Mad Orbit Dash — Submitting to Apple</span>
+        <span class="chip">Game No. 2 — In progress</span>
+        <span class="chip">Game No. 3 — Idea stage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-note">© 2026 Akavjah Creations. Built by one skeptic, one prompt at a time.</div>
+    <div class="foot-links">
+      <span>akavjahcreations@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const rows = document.querySelectorAll('.log-row');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  rows.forEach(r=>io.observe(r));
+</script>
+
+</body>
+</html>
