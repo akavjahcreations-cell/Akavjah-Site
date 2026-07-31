@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akavjah Creations — Privacy Policy</title>
+<meta name="description" content="Privacy policy for apps published by Akavjah Creations, including Mad Orbit Dash.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0d;
+    --surface:#131318;
+    --line:#242430;
+    --text:#edebe4;
+    --text-dim:#8b8b96;
+    --accent:#e8963c;
+    --accent-dim:#c97a2e;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px;}
+
+  header.top{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.02em;
+    color:var(--text);
+  }
+  .back{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--text-dim);
+  }
+  .back:hover{color:var(--accent);}
+
+  .orbit-mark{
+    position:relative;
+    width:34px;height:34px;
+    flex-shrink:0;
+  }
+  .orbit-mark .ring{
+    position:absolute;inset:0;
+    border:1.5px solid var(--line);
+    border-radius:50%;
+  }
+  .orbit-mark .dot{
+    position:absolute;
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--accent);
+    top:50%;left:50%;
+    margin:-2px 0 0 14px;
+    box-shadow:0 0 6px var(--accent);
+    animation:spin 5s linear infinite;
+    transform-origin:-14px 2px;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  main{padding:56px 0 88px;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 14px;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(28px,5vw,38px);
+    line-height:1.15;
+    margin:0 0 16px;
+    letter-spacing:-0.01em;
+  }
+  .lede{
+    color:var(--text-dim);
+    font-size:16px;
+    max-width:52ch;
+    margin:0 0 8px;
+  }
+  .updated{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--text-dim);
+    margin-top:20px;
+  }
+
+  section.block{
+    border-top:1px solid var(--line);
+    padding:32px 0;
+  }
+  section.block h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:19px;
+    font-weight:700;
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  section.block h2 .tick{
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--accent);
+    flex-shrink:0;
+  }
+  section.block p{
+    margin:0 0 12px;
+    color:var(--text);
+    font-size:15px;
+  }
+  section.block p:last-child{margin-bottom:0;}
+  section.block p.muted{color:var(--text-dim); font-size:14px;}
+
+  ul.plain{margin:0;padding:0;list-style:none;}
+  ul.plain li{
+    padding:8px 0 8px 20px;
+    position:relative;
+    font-size:15px;
+    border-top:1px solid var(--line);
+  }
+  ul.plain li:first-child{border-top:none;}
+  ul.plain li::before{
+    content:"—";
+    position:absolute;left:0;
+    color:var(--accent-dim);
+  }
+
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    margin-top:8px;
+  }
+  .contact-card .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--text-dim);
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    margin-bottom:6px;
+  }
+  .contact-card a{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:16px;
+    font-weight:500;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:24px 0 40px;
+  }
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+  }
+  footer p{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--text-dim);
+    margin:0;
+  }
+
+  @media (max-width:520px){
+    .brand{font-size:13px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="orbit-mark"><div class="ring"></div><div class="dot"></div></div>
+      <span class="brand">AKAVJAH CREATIONS</span>
+    </div>
+    <a class="back" href="/">← BACK TO SITE</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Legal / Privacy</p>
+    <h1>We don't want your data.<br>We built it that way.</h1>
+    <p class="lede">This policy covers every app published by Akavjah Creations, including Mad Orbit Dash. It's short on purpose — there isn't much to disclose when nothing leaves your device.</p>
+    <p class="updated">Last updated — July 31, 2026</p>
+
+    <section class="block">
+      <h2><span class="tick"></span>What we collect</h2>
+      <p>Nothing. We do not collect, store, or share any personal data, and we never ask you to create an account or sign in.</p>
+      <p class="muted">Your scores and level progress are saved locally on your device only. They're never transmitted to us or to anyone else — if you delete the app, they're gone.</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Third-party services</h2>
+      <p>None. Mad Orbit Dash doesn't use third-party analytics, advertising, or tracking SDKs of any kind. There's no ad network watching how you play, and no analytics package phoning home.</p>
+      <ul class="plain">
+        <li>No analytics or telemetry</li>
+        <li>No advertising or ad identifiers</li>
+        <li>No third-party crash or usage tracking</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Children's privacy</h2>
+      <p>Because we don't collect data from anyone, we don't collect data from children either. Mad Orbit Dash is safe for players of any age to use in that respect, in line with COPPA and similar child-privacy regulations.</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Changes to this policy</h2>
+      <p>If this policy ever changes, we'll update the date above and post the new version here. Given the app collects nothing today, we don't expect that to change — but if it ever did, you'd hear about it before it happened, not after.</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Questions</h2>
+      <p>If anything here is unclear, or you just want to double-check something before trusting us with a download, reach out directly.</p>
+      <div class="contact-card">
+        <div class="label">Contact</div>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Akavjah Creations</p>
+    <p>Built by a former skeptic, one prompt at a time.</p>
+  </div>
+</footer>
+
+</body>
+</html>
