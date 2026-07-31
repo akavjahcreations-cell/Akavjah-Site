@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mad Orbit Dash — Support</title>
+<meta name="description" content="Support, FAQ, and troubleshooting for Mad Orbit Dash by Akavjah Creations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0d;
+    --surface:#131318;
+    --line:#242430;
+    --text:#edebe4;
+    --text-dim:#8b8b96;
+    --accent:#e8963c;
+    --accent-dim:#c97a2e;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px;}
+
+  header.top{border-bottom:1px solid var(--line);padding:20px 0;}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.02em;color:var(--text);}
+  .back{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-dim);}
+  .back:hover{color:var(--accent);}
+
+  .orbit-mark{position:relative;width:34px;height:34px;flex-shrink:0;}
+  .orbit-mark .ring{position:absolute;inset:0;border:1.5px solid var(--line);border-radius:50%;}
+  .orbit-mark .dot{
+    position:absolute;width:5px;height:5px;border-radius:50%;background:var(--accent);
+    top:50%;left:50%;margin:-2px 0 0 14px;box-shadow:0 0 6px var(--accent);
+    animation:spin 5s linear infinite;transform-origin:-14px 2px;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  main{padding:56px 0 88px;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--accent);margin:0 0 14px;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:clamp(28px,5vw,38px);line-height:1.15;margin:0 0 16px;letter-spacing:-0.01em;
+  }
+  .lede{color:var(--text-dim);font-size:16px;max-width:54ch;margin:0;}
+
+  section.block{border-top:1px solid var(--line);padding:32px 0;}
+  section.block h2{
+    font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;
+    margin:0 0 14px;display:flex;align-items:center;gap:10px;
+  }
+  section.block h2 .tick{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  section.block p{margin:0 0 12px;font-size:15px;}
+  section.block p:last-child{margin-bottom:0;}
+  section.block p.muted{color:var(--text-dim); font-size:14px;}
+
+  .steps{margin:0;padding:0;list-style:none;counter-reset:step;}
+  .steps li{
+    counter-increment:step;
+    padding:10px 0 10px 34px;
+    position:relative;
+    font-size:15px;
+    border-top:1px solid var(--line);
+  }
+  .steps li:first-child{border-top:none;}
+  .steps li::before{
+    content:counter(step);
+    position:absolute;left:0;top:9px;
+    width:20px;height:20px;
+    border:1px solid var(--accent-dim);
+    border-radius:50%;
+    color:var(--accent);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .faq-item{border-top:1px solid var(--line);padding:16px 0;}
+  .faq-item:first-child{border-top:none;}
+  .faq-item .q{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:500;
+    font-size:15.5px;
+    margin:0 0 6px;
+    color:var(--text);
+  }
+  .faq-item .a{margin:0;font-size:14.5px;color:var(--text-dim);}
+
+  .contact-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    padding:20px 22px;margin-top:8px;
+  }
+  .contact-card .label{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-dim);
+    text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;
+  }
+  .contact-card a{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:500;}
+  .contact-card ul.plain{margin-top:12px;}
+
+  ul.plain{margin:0;padding:0;list-style:none;}
+  ul.plain li{
+    padding:6px 0 6px 20px;position:relative;font-size:14px;color:var(--text-dim);
+  }
+  ul.plain li::before{content:"—";position:absolute;left:0;color:var(--accent-dim);}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--text-dim);margin:0;}
+
+  @media (max-width:520px){ .brand{font-size:13px;} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="orbit-mark"><div class="ring"></div><div class="dot"></div></div>
+      <span class="brand">AKAVJAH CREATIONS</span>
+    </div>
+    <a class="back" href="/">← BACK TO SITE</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Support / Mad Orbit Dash</p>
+    <h1>Stuck on a level?<br>Found something broken?</h1>
+    <p class="lede">This is a one-person, one-app operation — so support means a real inbox, not a ticket queue. Here's what to try first, and how to reach me if that doesn't cover it.</p>
+
+    <section class="block">
+      <h2><span class="tick"></span>How to play</h2>
+      <p>A quick tap reverses the orbiting dot's direction. Press and hold to freeze the orb in place while the rings keep moving — release to resume travel in the same direction you were already going.</p>
+      <p>Rings collapse inward the longer you survive, and the gaps you need to thread get tighter as you climb. By level 40 or so, the whole board is working against you.</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Troubleshooting</h2>
+      <p class="muted">Try these in order before emailing — most issues clear up in the first two steps.</p>
+      <ol class="steps">
+        <li>Make sure you're on the latest version of Mad Orbit Dash from the App Store.</li>
+        <li>Force-close the app and reopen it.</li>
+        <li>Restart your device.</li>
+        <li>Check that iOS itself is up to date and you have some free storage.</li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Reporting a bug</h2>
+      <p>If it's still happening, email me with:</p>
+      <ul class="plain">
+        <li>Your device model (e.g. iPhone 14, iPhone SE)</li>
+        <li>Roughly what level or moment it happened at</li>
+        <li>What you expected vs. what actually happened</li>
+        <li>A screenshot or screen recording, if you can grab one</li>
+      </ul>
+      <p class="muted" style="margin-top:12px;">The 33-log bug hunt during development taught me that the details are usually where the real cause is hiding — so the more specific, the faster it gets fixed.</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Frequently asked</h2>
+      <div class="faq-item">
+        <p class="q">Is my progress saved?</p>
+        <p class="a">Yes — locally on your device, the moment you make it. There's no account, so it isn't backed up to a server.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">Does it need an internet connection?</p>
+        <p class="a">No. Mad Orbit Dash plays entirely offline — no login, no connection required.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">How many levels are there?</p>
+        <p class="a">50. Feedback from players shapes what comes after that.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">Can I suggest a feature?</p>
+        <p class="a">Always — email it over. Small-scope suggestions are the easiest to actually act on.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2><span class="tick"></span>Still stuck?</h2>
+      <p>Reach out anytime — I read every email myself and I'll get back to you as soon as I can.</p>
+      <div class="contact-card">
+        <div class="label">Contact</div>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Akavjah Creations</p>
+    <p>Built by a former skeptic, one prompt at a time.</p>
+  </div>
+</footer>
+
+</body>
+</html>
