@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akavjah Creations — Privacy Policy</title>
+  <meta name="robots" content="noindex">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/privacy/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/privacy/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/privacy/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/privacy/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/privacy/de/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/privacy/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/privacy/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/privacy/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/privacy/en/" />
+  <script>
+    (function () {
+      var supported = ["en", "fr", "it", "es", "de", "zh", "ja", "ko"];
+      var prefs = navigator.languages || [navigator.language || "en"];
+      var match = "en";
+      for (var i = 0; i < prefs.length; i++) {
+        var code = String(prefs[i]).toLowerCase().split("-")[0];
+        if (supported.indexOf(code) !== -1) { match = code; break; }
+      }
+      location.replace("./" + match + "/");
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=./en/"></noscript>
+  <style>
+    body{margin:0;background:#0F1424;color:#EAEAF2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
+    a{color:#FFC85C;text-decoration:none}
+    a:hover{text-decoration:underline}
+    p{color:#98A0B8;font-size:14px;line-height:2}
+  </style>
+</head>
+<body>
+  <p><a href="./en/" lang="en" hreflang="en">English</a> · <a href="./fr/" lang="fr" hreflang="fr">Français</a> · <a href="./it/" lang="it" hreflang="it">Italiano</a> · <a href="./es/" lang="es" hreflang="es">Español</a> · <a href="./de/" lang="de" hreflang="de">Deutsch</a> · <a href="./zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a> · <a href="./ja/" lang="ja" hreflang="ja">日本語</a> · <a href="./ko/" lang="ko" hreflang="ko">한국어</a></p>
+</body>
+</html>
