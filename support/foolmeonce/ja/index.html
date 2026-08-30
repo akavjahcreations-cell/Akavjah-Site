@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fool Me Once — サポート</title>
+  <meta name="description" content="Akavjah Creations の Fool Me Once に関するサポート・FAQ・トラブルシューティング。">
+  <link rel="canonical" href="https://www.akavjah.com/support/foolmeonce/ja/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/support/foolmeonce/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/support/foolmeonce/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/support/foolmeonce/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/support/foolmeonce/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/support/foolmeonce/de/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/support/foolmeonce/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/support/foolmeonce/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/support/foolmeonce/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/support/foolmeonce/en/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.backlink{font-size:14px; color:var(--muted); white-space:nowrap}
+.backlink:hover{color:var(--accent)}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+.orb-anim{transform-origin:19px 19px; animation:orbit 7s linear infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="https://www.akavjah.com/"><svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+  <circle cx="19" cy="19" r="13" fill="none" stroke="var(--ring)" stroke-width="2"
+    stroke-dasharray="66 16" stroke-linecap="round" transform="rotate(-55 19 19)"/>
+  <circle cx="19" cy="19" r="3.5" fill="var(--accent)" opacity=".9"/>
+  <g class="orb-anim"><circle cx="19" cy="6" r="3" fill="var(--accent)"/></g>
+</svg><span class="word">Akavjah Creations</span></a>
+    <a class="backlink" href="https://www.akavjah.com/">← サイトに戻る</a>
+  </header>
+  <main>
+    <p class="crumb">サポート / Fool Me Once</p>
+    <h1>ステージにだまされた？それとも何かおかしい？</h1>
+    <p class="lede">ここにチケットシステムはありません。開発者ひとり、アプリひとつ、そして本物のメール受信箱だけです。まずは以下をお試しください。それでも解決しないときの連絡方法もご案内します。</p>
+
+    <section>
+      <h2>遊び方</h2>
+      <p>各ステージで出されるのは、指示ひとつと、縮んでいくタイマーだけ。指示を読んで、書いてあるとおりに実行してください——ただし罠に注意。反対語、二重否定、枠の色と文字の色が食い違うトリック、答えを隠す記憶テスト、そして途中でひっくり返るルール。タップ、長押し、スワイプ、順番どおりに複数タップ——ときには、何もしないのが正解のこともあります。</p>
+      <p>最初はハート1つでスタートし、ステージ20・40・60・80でもう1つずつ手に入ります——ハート1つでミス1回を帳消しにできます。全100ステージをクリアすれば勝利。あるいはフルゲームを解放して、タイマーがどこまでも迫ってくる「Endless」モードに挑んでください。</p>
+    </section>
+
+    <section>
+      <h2>トラブルシューティング</h2>
+      <p>メールを送る前に、次の手順を上から順にお試しください。ほとんどの問題は最初の2つで解決します。</p>
+      <ol>
+      <li>App Store で Fool Me Once が最新バージョンになっているか確認する。</li>
+      <li>アプリを完全に終了してから開き直す。</li>
+      <li>端末を再起動する。</li>
+      <li>iOS が最新か、空き容量が残っているかを確認する。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>不具合の報告</h2>
+      <p>それでも直らない場合は、次の情報を添えてメールでお知らせください。</p>
+      <ul>
+      <li>端末のモデル（例：iPhone 14、iPhone SE）</li>
+      <li>どのステージで起きたか、そのとき指示に何と書いてあったか</li>
+      <li>期待していた動作と、実際に起きたこと</li>
+      <li>可能であれば、スクリーンショットか画面収録</li>
+      </ul>
+      <p class="note">どのステージも決定論的で、正解はつねにひとつだけです。だからもし理不尽に感じることがあれば、本当の原因はたいていその細部に隠れています。報告が具体的であるほど、修正も早くなります。</p>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+    <details>
+      <summary>進行状況は保存されますか？</summary>
+      <p>はい。最高到達ステージと購入済みの解放状態は、端末内にローカル保存されます。アカウントは存在しないため、サーバーへのバックアップはありません。</p>
+    </details>
+    <details>
+      <summary>インターネット接続は必要ですか？</summary>
+      <p>いいえ。Fool Me Once は完全オフラインで遊べます。ログインも不要です。（購入の処理だけは App Store が行うため、その瞬間だけ通信が必要です。）</p>
+    </details>
+    <details>
+      <summary>フルゲームでは何ができますか？</summary>
+      <p>最初の10ステージは無料です。買い切りの「Full Game」解放で、全100ステージ、フィナーレ、「Endless」モードが遊べるようになります。</p>
+    </details>
+    <details>
+      <summary>再インストールした／機種変更した場合、購入はどう復元しますか？</summary>
+      <p>購入時と同じ Apple ID でサインインした状態で、解放画面または「Read more」画面の「Restore Purchase」をタップしてください。復元に料金はかかりません。</p>
+    </details>
+    <details>
+      <summary>機能や新しい罠のリクエストはできますか？</summary>
+      <p>もちろんです。メールでお送りください。小さくて具体的な提案ほど、実現しやすくなります。</p>
+    </details>
+    </section>
+
+    <section>
+      <h2>それでも解決しないときは</h2>
+      <p>いつでもご連絡ください。すべてのメールに自分で目を通し、できるだけ早くお返事します。</p>
+    </section>
+
+    <div class="contact-card">
+      <p class="label">お問い合わせ</p>
+      <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+    </div>
+  </main>
+  <footer class="site">
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja" aria-current="true">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations</p>
+    <p class="tagline">かつての懐疑派が、プロンプトをひとつずつ重ねて作りました。</p>
+  </footer>
+</div>
+</body>
+</html>

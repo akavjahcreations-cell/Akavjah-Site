@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akavjah Creations — Ich kann nicht programmieren.</title>
+  <meta name="description" content="Akavjah Creations: das Build-Log eines totalen Code-Skeptikers, der sein erstes iOS-Spiel, Mad Orbit Dash, gebaut und bei Apple zum App-Store-Review eingereicht hat.">
+  <link rel="canonical" href="https://www.akavjah.com/de/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/de/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/en/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.backlink{font-size:14px; color:var(--muted); white-space:nowrap}
+.backlink:hover{color:var(--accent)}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+.orb-anim{transform-origin:19px 19px; animation:orbit 7s linear infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
+
+.wrap-wide{max-width:760px}
+nav.top{display:flex; gap:20px; font-size:14px}
+nav.top a{color:var(--muted)}
+nav.top a:hover{color:var(--accent)}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(32px,7vw,52px); margin-bottom:22px}
+.hero h1 em{font-style:italic; color:var(--accent)}
+.hero .lede{font-size:18.5px; max-width:620px}
+.ctas{display:flex; flex-wrap:wrap; gap:14px; margin:26px 0 0}
+.btn{display:inline-block; padding:12px 20px; border-radius:10px; font-weight:600; font-size:15.5px}
+.btn.primary{background:var(--accent); color:#181302}
+.btn.primary:hover{text-decoration:none; filter:brightness(1.07)}
+.btn.ghost{border:1px solid var(--ring); color:var(--ink)}
+.btn.ghost:hover{text-decoration:none; border-color:var(--accent); color:var(--accent)}
+.steps{display:flex; flex-wrap:wrap; gap:8px 22px; margin:48px 0 0; padding:18px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.steps span{font-size:13px; color:var(--muted); letter-spacing:.04em}
+.steps b{color:var(--accent); font-family:"Chakra Petch",sans-serif; font-weight:700; margin-right:7px}
+.eyebrow{font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin:0 0 10px}
+section.block{margin-top:84px}
+section.block h2{font-size:clamp(21px,4vw,27px); line-height:1.4; display:block}
+section.block h2::before{display:none}
+.logline{border-left:2px solid var(--line); padding:0 0 30px 24px; position:relative}
+.logline:last-child{padding-bottom:6px}
+.logline::before{content:""; position:absolute; left:-7px; top:4px; width:12px; height:12px; border-radius:50%;
+  background:var(--bg); border:2px solid var(--ring)}
+.logline .day{font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:13px; letter-spacing:.14em;
+  color:var(--accent); text-transform:uppercase}
+.logline p{margin:6px 0 8px}
+.logline .tag{font-size:13px; color:var(--muted); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.stats{display:flex; flex-wrap:wrap; gap:14px; margin:26px 0}
+.stat{flex:1 1 150px; border:1px solid var(--line); border-radius:14px; padding:18px 16px; text-align:center}
+.stat b{display:block; font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:38px; color:var(--accent); line-height:1.1}
+.stat span{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.hud{display:flex; justify-content:space-between; border:1px solid var(--line); border-radius:12px;
+  padding:12px 18px; margin:18px 0 8px; font-family:"Chakra Petch",sans-serif; font-size:13px; letter-spacing:.12em}
+.hud span{color:var(--muted)} .hud b{color:var(--accent); margin-left:8px}
+.hud-warn{font-size:11.5px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; margin:0 0 4px}
+.status-pill{display:inline-block; margin-top:8px; padding:7px 14px; border:1px solid var(--ring); border-radius:999px;
+  font-size:13.5px; color:var(--muted)}
+.roadmap{display:flex; flex-direction:column; gap:10px; margin-top:22px}
+.roadmap span{border:1px solid var(--line); border-radius:12px; padding:13px 16px; font-size:15px}
+.roadmap span:first-child{border-color:var(--ring); color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap wrap-wide">
+  <header class="site">
+    <a class="brand" href="#top"><svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+  <circle cx="19" cy="19" r="13" fill="none" stroke="var(--ring)" stroke-width="2"
+    stroke-dasharray="66 16" stroke-linecap="round" transform="rotate(-55 19 19)"/>
+  <circle cx="19" cy="19" r="3.5" fill="var(--accent)" opacity=".9"/>
+  <g class="orb-anim"><circle cx="19" cy="6" r="3" fill="var(--accent)"/></g>
+</svg><span class="word">Akavjah Creations</span></a>
+    <nav class="top"><a href="#story">Story</a><a href="#log">Build-Log</a><a href="#game">Mad Orbit Dash</a></nav>
+  </header>
+  <main id="top">
+    <div class="hero" id="story">
+      <p class="eyebrow">Akavjah Creations / Origin-Log</p>
+      <h1>Ich habe nie eine Zeile Code geschrieben. <em>Trotzdem habe ich ein Spiel gebaut.</em></h1>
+      <p class="lede">Vor ein paar Wochen traute ich „KI-gebauten Apps“ keinen Meter über den Weg. Dann beschloss ich, es auf die harte Tour herauszufinden — ein Prompt, ein Crash, eine Bug-Jagd nach der anderen —, ob jemand, der noch nie programmiert hat, in glatt sechs Tagen von einem leeren Ordner zu einem echten Apple-Developer-Account kommen kann.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#game">Mad Orbit Dash ansehen →</a>
+        <a class="btn ghost" href="#log">Das Build-Log lesen</a>
+      </div>
+      <div class="steps"><span><b>1</b>Skeptiker</span><span><b>2</b>Erster Prompt</span><span><b>3</b>Erster echter Crash</span><span><b>4</b>Level 50, endlich</span><span><b>5</b>Im Apple-Review</span></div>
+    </div>
+
+    <section class="block">
+      <p class="eyebrow">Warum ich daran zweifelte</p>
+      <h2>Ich habe hundert „Ich habe eine App mit KI gebaut“-Posts gesehen. Die meisten davon waren Demos, keine Apps.</h2>
+      <p>Ich bin kein Entwickler. Ich kann kein Swift, ich kenne Xcode nicht, und bis vor Kurzem hätte ich dir nicht sagen können, was ein „Build Target“ ist. Jede „Vibe Coding“-Geschichte, die ich online gesehen hatte, endete bei einem hübschen Screenshot — nichts, was den Kontakt mit einem echten Gerät, einem echten App-Store-Review oder einem echten Spieler überlebt hätte, der auf eine Weise auf den Bildschirm hämmert, die niemand eingeplant hat.</p>
+      <p>Also wählte ich eine Idee, die klein genug war, um sie fertigzustellen, und störrisch genug, um jede Schwäche des Verfahrens offenzulegen: ein Ein-Tipp-Arcade-Spiel, bei dem ein Punkt um einen Kern kreist und man durch die Lücken kollabierender Ringe schlüpft. Einfach zu beschreiben. Brutal, es wirklich richtig hinzubekommen — die Kollision muss exakt sein, die Schwierigkeit muss fair ansteigen, und ein einziger schlechter Frame beendet den Lauf.</p>
+    </section>
+
+    <section class="block" id="log">
+      <p class="eyebrow">Das echte Build-Log</p>
+      <h2>Nichts geschönt. Nur was passiert ist, der Reihe nach.</h2>
+      <div style="margin-top:26px">
+      <div class="logline"><span class="day">SA</span><p>Bei null angefangen. Das Spiel in ganz normalem Deutsch beschrieben — ein Punkt, der um einen Kern kreist und durch die Lücken kollabierender Ringe weicht — und zugesehen, wie es zum ersten Mal wirklich lief.</p><span class="tag">erster Build kompiliert · konnte es selbst nicht glauben</span></div>
+      <div class="logline"><span class="day">SA</span><p>Auf die harte Tour gelernt, dass „sieht richtig aus“ und „ist richtig“ zwei verschiedene Dinge sind. Die Kollision musste kontinuierlich über die gesamte Überlappungszone geprüft werden — nicht nur einmal pro Frame —, sonst zählte ein sichtbares Streifen nicht als Treffer.</p><span class="tag">GameEngine.swift · Kollision neu geschrieben</span></div>
+      <div class="logline"><span class="day">SO</span><p>Einen „Demo-Modus“ gebaut, damit das Spiel sich selbst spielt und die Schwierigkeit auf Leveln testet, die ich von Hand nie erreichen würde. Es starb verdächtig oft kurz vor der Ziellinie.</p><span class="tag">Autoplay ergänzt · Rätsel-Bug protokolliert</span></div>
+      <div class="logline"><span class="day">MO</span><p>Diesen Bug durch 33 Runden Konsolenprotokolle gejagt, bis ich ihn fand: Das Spiel ließ den Orb durch ein Tor, vergaß dann aber stillschweigend, dass er einen Frame später immer noch sterben konnte. Behoben. Der Demo-Modus erreichte endlich das oberste Level.</p><span class="tag">33 Log-Dateien · eine echte Ursache</span></div>
+      <div class="logline"><span class="day">DI</span><p>Originalmusik und Soundeffekte von Hand komponiert und zugeschnitten — bis hin zu einem einzelnen 0,35-Sekunden-Plopp für den Tipp-Sound, damit er kein Echo wirft.</p><span class="tag">Audio-Durchgang · sfx_tap.wav, Take 6</span></div>
+      <div class="logline"><span class="day">MI</span><p>Einen echten Apple-Developer-Account registriert — und die Freigabe bekommen.</p><span class="tag">Developer-Account · freigegeben</span></div>
+      <div class="logline"><span class="day">DO</span><p>Sechs Tage später: Mad Orbit Dash wurde am 31. Juli bei Apple eingereicht und wartet nun in der Review-Warteschlange auf die Freigabe — und ich habe schon angefangen, das nächste zu bauen.</p><span class="tag">Status: im Review · eingereicht am 31. Juli</span></div>
+      </div>
+    </section>
+
+    <section class="block" id="game">
+      <p class="eyebrow">Das Spiel selbst</p>
+      <h2>Mad Orbit Dash</h2>
+      <p>Ein Tippen kehrt deine Umlaufbahn um. Das ist die gesamte Steuerung. Je länger du überlebst, desto schneller stürzen die Ringe nach innen, die Lücken werden enger, und ab etwa Level 40 bewegt sich das ganze Spielfeld gegen dich. Es ist mit Absicht klein — klein genug, dass jede raue Kante meine Aufgabe war: finden und beheben.</p>
+      <div class="stats"><div class="stat"><b>50</b><span>Level zu meistern</span></div><div class="stat"><b>1</b><span>Tipp genügt</span></div><div class="stat"><b>0</b><span>Zeilen selbst von Hand geschrieben</span></div></div>
+      <div class="hud"><span>BEST<b>—</b></span><span>SCORE<b>—</b></span><span>PREV<b>—</b></span></div>
+      <p class="hud-warn">⚠ Nur zur Veranschaulichung — kein echtes Gameplay-Material</p>
+      <span class="status-pill">Eingereicht am 31. Juli · Im Apple-Review</span>
+    </section>
+
+    <section class="block">
+      <p class="eyebrow">Wie es weitergeht</p>
+      <h2>Ein Spiel ist fertig. Es sollte nie das einzige bleiben.</h2>
+      <p>Mad Orbit Dash war der Machbarkeitsbeweis: dass jemand ohne jede Programmiererfahrung eine Idee in sechs Tagen von einem leeren Ordner bis zur eingereichten App bringen kann. Es steht jetzt in Apples Review-Warteschlange, und zwei weitere Spiele sind bereits in Arbeit.</p>
+      <div class="roadmap"><span>Mad Orbit Dash — Im Apple-Review</span><span>Fool Me Once — In Entwicklung</span><span>Spiel Nr. 3 — Frühes Konzept</span></div>
+    </section>
+
+    <div class="contact-card">
+      <p class="label">Kontakt</p>
+      <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+    </div>
+  </main>
+  <footer class="site">
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de" aria-current="true">Deutsch</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations</p>
+    <p class="tagline">Gebaut von einem ehemaligen Skeptiker – Prompt für Prompt.</p>
+  </footer>
+</div>
+</body>
+</html>
