@@ -19,6 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
   <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
   --ring:#4A557E; --line:#242C48; --maxw:680px;
@@ -107,6 +114,11 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
 </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mad Orbit Dash", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/mad-orbit-dash/id6796168613", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ma progression est-elle sauvegardée ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui — localement, sur votre appareil, dès l'instant où vous progressez. Il n'y a pas de compte, donc rien n'est envoyé sur un serveur."}}, {"@type": "Question", "name": "Faut-il une connexion Internet ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Mad Orbit Dash fonctionne entièrement hors ligne — pas de compte, pas de connexion."}}, {"@type": "Question", "name": "Combien y a-t-il de niveaux ?", "acceptedAnswer": {"@type": "Answer", "text": "50. La suite dépendra des retours des joueurs."}}, {"@type": "Question", "name": "Puis-je suggérer une fonctionnalité ?", "acceptedAnswer": {"@type": "Answer", "text": "Bien sûr — envoyez-la par e-mail. Les idées simples et bien délimitées sont les plus faciles à concrétiser."}}]}</script>
+  <meta property="og:title" content="Mad Orbit Dash — Assistance">
+  <meta property="og:description" content="Assistance, FAQ et dépannage pour Mad Orbit Dash, par Akavjah Creations.">
+  <meta property="og:type" content="website">
 </head>
 <body>
 <div class="wrap">
@@ -121,6 +133,17 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   </header>
   <main>
     <p class="crumb">Assistance / Mad Orbit Dash</p>
+    <section>
+      <h2>À propos de Mad Orbit Dash</h2>
+      <p>Mad Orbit Dash est un jeu d'arcade à un seul tap pour iPhone : un point tourne autour d'un noyau, les anneaux qui l'entourent se referment peu à peu, et un simple tap inverse votre sens pour vous faufiler dans les brèches avant qu'elles ne se ferment. Cinquante niveaux, une seule commande, et une difficulté qui, à la fin, retourne tout le plateau contre vous. Gratuit : simple à prendre en main, impitoyable à maîtriser.</p>
+      <div class="about-promo">
+        <a class="clip" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613" aria-label="Regarder Mad Orbit Dash en jeu — ouvre l'App Store">
+          <video autoplay loop muted playsinline preload="metadata" src="../gameplay-madorbitdash-fr.mp4"></video>
+        </a>
+        <a class="getit" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613"><img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr"></a>
+      </div>
+    </section>
+
     <h1>Bloqué à un niveau ? Quelque chose ne marche pas ?</h1>
     <p class="lede">Ici, pas de plateforme de tickets : une seule personne, une seule appli et une vraie boîte mail. Voici ce qu'il faut essayer d'abord — et comment me joindre si ça ne suffit pas.</p>
 

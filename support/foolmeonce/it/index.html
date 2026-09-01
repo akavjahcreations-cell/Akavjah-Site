@@ -19,6 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
   <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
   --ring:#4A557E; --line:#242C48; --maxw:680px;
@@ -107,6 +114,11 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
 </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Fool Me Once — Trap Game", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I miei progressi vengono salvati?", "acceptedAnswer": {"@type": "Answer", "text": "Sì — il tuo miglior quadro e lo sblocco sono salvati in locale sul dispositivo. Non c'è alcun account, quindi nulla finisce su un server."}}, {"@type": "Question", "name": "Serve una connessione a Internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. Fool Me Once funziona completamente offline — nessun login richiesto. (Gli acquisti passano dall'App Store, che ha bisogno della connessione solo in quel momento.)"}}, {"@type": "Question", "name": "Cosa ottengo con il gioco completo?", "acceptedAnswer": {"@type": "Answer", "text": "I primi 10 quadri sono gratuiti. Lo sblocco una tantum «Full Game» apre tutti i 100 quadri, il finale e la modalità Endless."}}, {"@type": "Question", "name": "Ho reinstallato l'app o cambiato dispositivo — come recupero l'acquisto?", "acceptedAnswer": {"@type": "Answer", "text": "Tocca «Restore Purchase» (nella schermata di sblocco o in quella «Read more») con lo stesso ID Apple usato per l'acquisto. Il ripristino è gratuito."}}, {"@type": "Question", "name": "Posso proporre una funzionalità o una nuova trappola?", "acceptedAnswer": {"@type": "Answer", "text": "Sempre — mandala via email. Le proposte piccole e ben definite sono le più facili da realizzare davvero."}}]}</script>
+  <meta property="og:title" content="Fool Me Once — Assistenza">
+  <meta property="og:description" content="Assistenza, FAQ e risoluzione dei problemi per Fool Me Once di Akavjah Creations.">
+  <meta property="og:type" content="website">
 </head>
 <body>
 <div class="wrap">
@@ -121,6 +133,17 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   </header>
   <main>
     <p class="crumb">Assistenza / Fool Me Once</p>
+    <section>
+      <h2>Info su Fool Me Once</h2>
+      <p>Fool Me Once è un gioco di trappole gratuito da provare per iPhone: un'istruzione, un timer che si accorcia, e 100 quadri pensati apposta per farti sbagliare mossa. Contrari, doppie negazioni, colori che ingannano, regole che si ribaltano a metà partita — leggi in fretta, pensa più in fretta ancora, e non farti fregare due volte. Dieci quadri gratis; uno sblocco unico apre tutti i 100, il finale e la modalità Endless.</p>
+      <div class="about-promo">
+        <a class="clip" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615" aria-label="Guarda il gameplay di Fool Me Once — apre l'App Store">
+          <video autoplay loop muted playsinline preload="metadata" src="../gameplay-foolmeonce.mp4"></video>
+        </a>
+        <a class="getit" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615"><img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us"></a>
+      </div>
+    </section>
+
     <h1>Ingannato da un quadro? Qualcosa non funziona?</h1>
     <p class="lede">Qui non c'è un sistema di ticket: una persona sola, una sola app e una casella di posta vera. Ecco cosa provare per primo — e come contattarmi se non basta.</p>
 

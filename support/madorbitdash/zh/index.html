@@ -19,6 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
   <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
   --ring:#4A557E; --line:#242C48; --maxw:680px;
@@ -107,6 +114,11 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
 </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mad Orbit Dash", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/mad-orbit-dash/id6796168613", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我的进度会保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "会——在你达成的那一刻就保存在设备本地。游戏没有账号系统，因此不会备份到任何服务器。"}}, {"@type": "Question", "name": "需要联网吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。Mad Orbit Dash 完全离线运行——无需登录，无需网络。"}}, {"@type": "Question", "name": "一共有多少关？", "acceptedAnswer": {"@type": "Answer", "text": "50 关。之后怎么走，取决于玩家们的反馈。"}}, {"@type": "Question", "name": "可以提功能建议吗？", "acceptedAnswer": {"@type": "Answer", "text": "随时欢迎——发邮件即可。范围小而明确的建议最容易真正落地。"}}]}</script>
+  <meta property="og:title" content="Mad Orbit Dash — 支持">
+  <meta property="og:description" content="Akavjah Creations 出品的 Mad Orbit Dash 支持、常见问题与故障排查。">
+  <meta property="og:type" content="website">
 </head>
 <body>
 <div class="wrap">
@@ -121,6 +133,17 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   </header>
   <main>
     <p class="crumb">支持 / Mad Orbit Dash</p>
+    <section>
+      <h2>关于 Mad Orbit Dash</h2>
+      <p>Mad Orbit Dash 是一款单指点按的 iPhone 街机游戏：一个小球绕着中心旋转，周围的圆环不断向内收缩，只需轻轻一点就能反转方向，抢在缺口闭合前钻过去。50 个关卡，一种操作方式，难度曲线到最后会让整个局面都跟你作对。免费畅玩：上手简单，精通极难。</p>
+      <div class="about-promo">
+        <a class="clip" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613" aria-label="观看 Mad Orbit Dash 游戏画面 — 跳转到 App Store">
+          <video autoplay loop muted playsinline preload="metadata" src="../gameplay-madorbitdash-zh.mp4"></video>
+        </a>
+        <a class="getit" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613"><img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn"></a>
+      </div>
+    </section>
+
     <h1>卡关了？还是发现了什么问题？</h1>
     <p class="lede">这里没有工单系统——只有一个人、一款应用和一个真实的邮箱。请先按下面的方法试一试；如果还是解决不了，欢迎直接联系我。</p>
 

@@ -19,6 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
   <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
   --ring:#4A557E; --line:#242C48; --maxw:680px;
@@ -107,6 +114,11 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.orb-anim{animation:none}}
 </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Fool Me Once — Trap Game", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "進行状況は保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。最高到達ステージと購入済みの解放状態は、端末内にローカル保存されます。アカウントは存在しないため、サーバーへのバックアップはありません。"}}, {"@type": "Question", "name": "インターネット接続は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。Fool Me Once は完全オフラインで遊べます。ログインも不要です。（購入の処理だけは App Store が行うため、その瞬間だけ通信が必要です。）"}}, {"@type": "Question", "name": "フルゲームでは何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "最初の10ステージは無料です。買い切りの「Full Game」解放で、全100ステージ、フィナーレ、「Endless」モードが遊べるようになります。"}}, {"@type": "Question", "name": "再インストールした／機種変更した場合、購入はどう復元しますか？", "acceptedAnswer": {"@type": "Answer", "text": "購入時と同じ Apple ID でサインインした状態で、解放画面または「Read more」画面の「Restore Purchase」をタップしてください。復元に料金はかかりません。"}}, {"@type": "Question", "name": "機能や新しい罠のリクエストはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "もちろんです。メールでお送りください。小さくて具体的な提案ほど、実現しやすくなります。"}}]}</script>
+  <meta property="og:title" content="Fool Me Once — サポート">
+  <meta property="og:description" content="Akavjah Creations の Fool Me Once に関するサポート・FAQ・トラブルシューティング。">
+  <meta property="og:type" content="website">
 </head>
 <body>
 <div class="wrap">
@@ -121,6 +133,17 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   </header>
   <main>
     <p class="crumb">サポート / Fool Me Once</p>
+    <section>
+      <h2>Fool Me Once について</h2>
+      <p>Fool Me Once は無料で試せる、iPhone向けの「ひっかけ」ゲームです。指示はたったひとつ、タイマーは刻一刻と縮んでいき、100のステージはことごとくあなたに間違った選択をさせるよう作られています。反対語、二重否定、嘘をつく色、途中でひっくり返るルール——素早く読んで、もっと素早く考えて、同じ手には二度と引っかからないでください。最初の10ステージは無料。買い切りの解放で、全100ステージとフィナーレ、Endlessモードが遊べるようになります。</p>
+      <div class="about-promo">
+        <a class="clip" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615" aria-label="Fool Me Once のプレイ映像を見る — App Storeが開きます">
+          <video autoplay loop muted playsinline preload="metadata" src="../gameplay-foolmeonce.mp4"></video>
+        </a>
+        <a class="getit" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615"><img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us"></a>
+      </div>
+    </section>
+
     <h1>ステージにだまされた？それとも何かおかしい？</h1>
     <p class="lede">ここにチケットシステムはありません。開発者ひとり、アプリひとつ、そして本物のメール受信箱だけです。まずは以下をお試しください。それでも解決しないときの連絡方法もご案内します。</p>
 
