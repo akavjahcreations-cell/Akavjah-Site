@@ -96,3 +96,32 @@ Pricing note (Mad Orbit Dash):
   (superseding an earlier $0.99 listing). If a future App Store version
   changes pricing again, update MOD_ABOUT in generate.py accordingly -
   search for "about_p" under "MAD ORBIT DASH ABOUT".
+
+Breadcrumb structured data:
+- All 24 content pages (8 languages x MOD support / FMO support / privacy)
+  now carry BreadcrumbList JSON-LD (Akavjah Creations > Support > [game]
+  or Akavjah Creations > Privacy policy). This can make Google show a
+  breadcrumb trail in search results instead of a raw URL. No visible
+  on-page change.
+
+Inline app icons + mailing address:
+- Real App Store icons (from the files you provided) now appear inline
+  next to the "About [game]" heading on both games' support pages, all
+  8 languages - support/madorbitdash/icon-madorbitdash.png and
+  support/foolmeonce/icon-foolmeonce.png.
+- A mailing address block was added under the contact email on every
+  page that has a contact card (homepage, both games' support pages,
+  privacy policy - all 8 languages): Akavjah Creations, PO Box 220300,
+  Chantilly, VA 20153, United States. "United States" was added by
+  Claude for international clarity/deliverability since it wasn't in
+  the address as given - remove it in generate.py's MAILING_ADDRESS
+  constant if not wanted. The address itself is not translated (postal
+  addresses conventionally aren't); only the label above it
+  ("Mailing address" / "Adresse postale" / etc.) is localized per
+  language, in the ADDR_LABEL dict.
+
+Icon fix: the "About [game]" heading previously showed both the site's
+decorative orb-dot bullet (used before every h2) and the real App Store
+icon. The orb bullet is now suppressed on that specific heading only
+(via the about-h2 CSS class) - the real icon is the only thing shown.
+Every other section heading keeps its orb bullet as before.

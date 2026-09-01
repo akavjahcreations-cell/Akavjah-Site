@@ -25,6 +25,9 @@
 .about-promo .clip video{width:100%; height:auto; display:block}
 .about-promo .getit{flex:none}
 .about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
 
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
@@ -103,6 +106,10 @@ details p{margin:10px 0 2px; color:var(--muted)}
   font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
 }
 .contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
 footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
 .langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
 .langs a{color:var(--muted)}
@@ -116,6 +123,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mad Orbit Dash", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/mad-orbit-dash/id6796168613", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I miei progressi vengono salvati?", "acceptedAnswer": {"@type": "Answer", "text": "Sì — in locale, sul tuo dispositivo, nell'istante in cui li ottieni. Non c'è alcun account, quindi non esiste un backup su server."}}, {"@type": "Question", "name": "Serve una connessione a Internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mad Orbit Dash funziona completamente offline — niente login, niente connessione."}}, {"@type": "Question", "name": "Quanti livelli ci sono?", "acceptedAnswer": {"@type": "Answer", "text": "50. Quello che verrà dopo dipende dai suggerimenti dei giocatori."}}, {"@type": "Question", "name": "Posso proporre una funzionalità?", "acceptedAnswer": {"@type": "Answer", "text": "Sempre — mandala via email. Le proposte piccole e ben definite sono le più facili da realizzare davvero."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://www.akavjah.com/support/madorbitdash/"}, {"@type": "ListItem", "position": 3, "name": "Mad Orbit Dash", "item": "https://www.akavjah.com/support/madorbitdash/it/"}]}</script>
   <meta property="og:title" content="Mad Orbit Dash — Assistenza">
   <meta property="og:description" content="Assistenza, FAQ e risoluzione dei problemi per Mad Orbit Dash di Akavjah Creations.">
   <meta property="og:type" content="website">
@@ -139,7 +147,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   <main>
     <p class="crumb">Assistenza / Mad Orbit Dash</p>
     <section>
-      <h2>Info su Mad Orbit Dash</h2>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-madorbitdash.png" alt="" width="44" height="44">Info su Mad Orbit Dash</h2>
       <p>Mad Orbit Dash è un gioco arcade a un solo tocco per iPhone: un punto orbita attorno a un nucleo, gli anelli intorno a lui collassano verso l'interno, e un tocco basta a invertire la rotta per infilarti nei varchi prima che si chiudano. Cinquanta livelli, un solo comando, e una curva di difficoltà che alla fine mette l'intero schermo contro di te. Gratuito: semplice da imparare, spietato da padroneggiare.</p>
       <div class="about-promo">
         <a class="clip" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613" aria-label="Guarda il gameplay di Mad Orbit Dash — apre l'App Store">
@@ -209,6 +217,8 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
     <div class="contact-card">
       <p class="label">Contatti</p>
       <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">Indirizzo postale</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
     </div>
   </main>
   <footer class="site">

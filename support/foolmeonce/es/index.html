@@ -25,6 +25,9 @@
 .about-promo .clip video{width:100%; height:auto; display:block}
 .about-promo .getit{flex:none}
 .about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
 
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
@@ -103,6 +106,10 @@ details p{margin:10px 0 2px; color:var(--muted)}
   font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
 }
 .contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
 footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
 .langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
 .langs a{color:var(--muted)}
@@ -116,6 +123,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Fool Me Once — Trap Game", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Se guarda mi progreso?", "acceptedAnswer": {"@type": "Answer", "text": "Sí — tu mejor tablero y tu desbloqueo se guardan en local, en tu dispositivo. No hay cuentas, así que nada se respalda en un servidor."}}, {"@type": "Question", "name": "¿Necesita conexión a Internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. Fool Me Once funciona completamente sin conexión — sin registro. (Las compras las gestiona el App Store, que necesita conexión solo en ese momento.)"}}, {"@type": "Question", "name": "¿Qué incluye el juego completo?", "acceptedAnswer": {"@type": "Answer", "text": "Los 10 primeros tableros son gratis. El desbloqueo único «Full Game» abre los 100 tableros, el final y el modo Endless."}}, {"@type": "Question", "name": "He reinstalado la app o cambiado de dispositivo — ¿cómo recupero mi compra?", "acceptedAnswer": {"@type": "Answer", "text": "Toca «Restore Purchase» (en la pantalla de desbloqueo o en la de «Read more») con la misma cuenta de Apple con la que compraste. Restaurar no cuesta nada."}}, {"@type": "Question", "name": "¿Puedo sugerir una función o una trampa nueva?", "acceptedAnswer": {"@type": "Answer", "text": "Claro — mándala por correo. Las ideas pequeñas y concretas son las más fáciles de llevar a la práctica."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://www.akavjah.com/support/foolmeonce/"}, {"@type": "ListItem", "position": 3, "name": "Fool Me Once — Trap Game", "item": "https://www.akavjah.com/support/foolmeonce/es/"}]}</script>
   <meta property="og:title" content="Fool Me Once — Soporte">
   <meta property="og:description" content="Soporte, preguntas frecuentes y solución de problemas de Fool Me Once, de Akavjah Creations.">
   <meta property="og:type" content="website">
@@ -139,7 +147,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   <main>
     <p class="crumb">Soporte / Fool Me Once</p>
     <section>
-      <h2>Acerca de Fool Me Once</h2>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-foolmeonce.png" alt="" width="44" height="44">Acerca de Fool Me Once</h2>
       <p>Fool Me Once es un juego de trampas gratis para probar en iPhone: una instrucción, un temporizador que se acorta, y 100 tableros pensados para hacerte fallar. Contrarios, dobles negaciones, colores que engañan, reglas que se invierten a mitad de partida — lee rápido, piensa más rápido todavía, y no dejes que te engañen dos veces. Diez tableros gratis; un desbloqueo único abre los 100, el final y el modo Endless.</p>
       <div class="about-promo">
         <a class="clip" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615" aria-label="Ver el gameplay de Fool Me Once — abre el App Store">
@@ -213,6 +221,8 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
     <div class="contact-card">
       <p class="label">Contacto</p>
       <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">Dirección postal</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
     </div>
   </main>
   <footer class="site">

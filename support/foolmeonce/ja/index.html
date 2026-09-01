@@ -25,6 +25,9 @@
 .about-promo .clip video{width:100%; height:auto; display:block}
 .about-promo .getit{flex:none}
 .about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
 
 :root{
   --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
@@ -103,6 +106,10 @@ details p{margin:10px 0 2px; color:var(--muted)}
   font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
 }
 .contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
 footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
 .langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
 .langs a{color:var(--muted)}
@@ -116,6 +123,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Fool Me Once — Trap Game", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "url": "https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "進行状況は保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。最高到達ステージと購入済みの解放状態は、端末内にローカル保存されます。アカウントは存在しないため、サーバーへのバックアップはありません。"}}, {"@type": "Question", "name": "インターネット接続は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。Fool Me Once は完全オフラインで遊べます。ログインも不要です。（購入の処理だけは App Store が行うため、その瞬間だけ通信が必要です。）"}}, {"@type": "Question", "name": "フルゲームでは何ができますか？", "acceptedAnswer": {"@type": "Answer", "text": "最初の10ステージは無料です。買い切りの「Full Game」解放で、全100ステージ、フィナーレ、「Endless」モードが遊べるようになります。"}}, {"@type": "Question", "name": "再インストールした／機種変更した場合、購入はどう復元しますか？", "acceptedAnswer": {"@type": "Answer", "text": "購入時と同じ Apple ID でサインインした状態で、解放画面または「Read more」画面の「Restore Purchase」をタップしてください。復元に料金はかかりません。"}}, {"@type": "Question", "name": "機能や新しい罠のリクエストはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "もちろんです。メールでお送りください。小さくて具体的な提案ほど、実現しやすくなります。"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://www.akavjah.com/support/foolmeonce/"}, {"@type": "ListItem", "position": 3, "name": "Fool Me Once — Trap Game", "item": "https://www.akavjah.com/support/foolmeonce/ja/"}]}</script>
   <meta property="og:title" content="Fool Me Once — サポート">
   <meta property="og:description" content="Akavjah Creations の Fool Me Once に関するサポート・FAQ・トラブルシューティング。">
   <meta property="og:type" content="website">
@@ -139,7 +147,7 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
   <main>
     <p class="crumb">サポート / Fool Me Once</p>
     <section>
-      <h2>Fool Me Once について</h2>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-foolmeonce.png" alt="" width="44" height="44">Fool Me Once について</h2>
       <p>Fool Me Once は無料で試せる、iPhone向けの「ひっかけ」ゲームです。指示はたったひとつ、タイマーは刻一刻と縮んでいき、100のステージはことごとくあなたに間違った選択をさせるよう作られています。反対語、二重否定、嘘をつく色、途中でひっくり返るルール——素早く読んで、もっと素早く考えて、同じ手には二度と引っかからないでください。最初の10ステージは無料。買い切りの解放で、全100ステージとフィナーレ、Endlessモードが遊べるようになります。</p>
       <div class="about-promo">
         <a class="clip" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615" aria-label="Fool Me Once のプレイ映像を見る — App Storeが開きます">
@@ -213,6 +221,8 @@ footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--lin
     <div class="contact-card">
       <p class="label">お問い合わせ</p>
       <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">郵送先住所</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
     </div>
   </main>
   <footer class="site">
