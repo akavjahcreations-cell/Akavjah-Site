@@ -63,3 +63,36 @@ THIS IS A FULL REPLACEMENT DROP:
 - Delete everything in your GitHub Pages repo root, then copy in the
   entire contents of this folder (not the folder itself) in its place.
 - Commit and push. Give Pages a couple of minutes, then hard-refresh.
+
+Fix applied (this build): the homepage / was incorrectly tagged
+<meta name="robots" content="noindex"> in an earlier build, which would
+have told Google to exclude it from search entirely. That tag is now
+removed from the homepage only; the three section-root redirect pages
+(/support/madorbitdash/, /support/foolmeonce/, /privacy/) correctly KEEP
+noindex, since they're pure JS-redirect stubs with no real content -
+their language subpages (e.g. /support/madorbitdash/en/) are what should
+be indexed, and they don't carry noindex.
+
+Social share images (Open Graph):
+- support/madorbitdash/og-madorbitdash.png and support/foolmeonce/og-foolmeonce.png
+  are the real 1200x630 preview images shown when a link to either game's
+  support page is shared on Discord/iMessage/Slack/social. Built from the
+  actual App Store icons you provided. Wired via og:image + twitter:image
+  meta tags on all 8 language versions of both games' support pages.
+- The homepage has no og:image yet (no Akavjah Creations brand image exists
+  yet) - add one later by dropping a 1200x630 PNG at the root and pointing
+  H[lang]["og_image"] at it, same pattern as the two games.
+
+Static section-root landing pages:
+- /support/madorbitdash/, /support/foolmeonce/, and /privacy/ are no longer
+  bare JS-redirect stubs with noindex - they're now real static pages
+  (still auto-redirect visitors to their language via JS, but the HTML
+  itself is indexable) so Google can list the section root as its own
+  search result alongside the specific language pages.
+
+Pricing note (Mad Orbit Dash):
+- Current About-section copy says "Free to play" in all 8 languages, per
+  owner confirmation that Apple approved a new free + 8-language version
+  (superseding an earlier $0.99 listing). If a future App Store version
+  changes pricing again, update MOD_ABOUT in generate.py accordingly -
+  search for "about_p" under "MAD ORBIT DASH ABOUT".
