@@ -125,3 +125,57 @@ decorative orb-dot bullet (used before every h2) and the real App Store
 icon. The orb bullet is now suppressed on that specific heading only
 (via the about-h2 CSS class) - the real icon is the only thing shown.
 Every other section heading keeps its orb bullet as before.
+
+Site navigation + brand logo (this build):
+- Real clickable site navigation added: Home / Support / Privacy links now
+  appear on every page (homepage, support hub, both games, privacy),
+  all 8 languages. Previously these pages were only reachable by typing
+  the direct URL.
+- New generic Support hub at /support/{lang}/ - lists both games with
+  their icons and links to each game's specific support page. This is
+  what "Support" in the nav points to.
+- Homepage: old in-page Story/Build Log/Mad Orbit Dash jump-nav removed
+  in favor of the new site-wide nav; hero CTA buttons still jump to the
+  same in-page sections as before.
+- Official trademark logo (brand/logo-full.png, brand/logo-small.png)
+  now used: large + centered in the homepage hero, small version in
+  every page's header next to "Akavjah Creations", and again (46px,
+  right-aligned) next to the contact info in every contact card.
+- "Akavjah Creations" now carries a ™ superscript (header wordmark +
+  footer copyright line, every page) since the trademark is pending,
+  not yet registered - do NOT change this to ® until USPTO actually
+  grants registration; using ® before that is legally improper.
+- Homepage now has a real Open Graph share image (brand/og-homepage.png)
+  and the whole site has a proper favicon (brand/favicon.ico,
+  favicon-32.png, favicon-512.png, apple-touch-icon.png) - both were
+  previously blocked on having no brand asset.
+
+Fixes in this build:
+- sitemap.xml was missing the new /support/{lang}/ hub pages (added when
+  the hub was built, but the sitemap generator wasn't updated at the
+  time). Fixed: 36 -> 45 URLs now listed.
+- Added a branded 404.html at the repo root. GitHub Pages serves this
+  automatically for any broken/mistyped URL. Detects browser language
+  client-side (same pattern as the other redirect stubs) and links to
+  Home and Support in the right language.
+
+Accessibility pass (this build):
+- Verified: color contrast on every text/bg pairing clears WCAG AA with
+  real margin (7:1-15:1 vs 4.5:1 minimum); alt text present on every
+  image, scanned across all pages; lang attributes correct everywhere.
+- Fixed: decorative gameplay videos now carry aria-hidden="true" - the
+  parent link already has a proper aria-label describing the video, so
+  screen readers now skip the unlabeled <video> element cleanly instead
+  of announcing an ambiguous media control.
+- Removed: the old animated-SVG placeholder logo (unused since the real
+  trademark logo replaced it everywhere) and its now-orphaned CSS.
+
+Dead code sweep (this build):
+- Removed .backlink CSS (unused since the old "← Back to site" link was
+  replaced by the Home/Support/Privacy nav bar).
+- Removed the 16 now-unused "back" translation strings (one per language,
+  x2 for MOD support + privacy content) that fed that old link, plus the
+  dead threading that carried them through to page_shell() without ever
+  being rendered.
+- Verified via automated scan: zero unused CSS classes remain anywhere
+  in the generated site.
