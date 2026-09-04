@@ -123,6 +123,9 @@ details p{margin:10px 0 2px; color:var(--muted)}
 .tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
 footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
 .langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
 .langs a{color:var(--muted)}
 .langs a:hover{color:var(--accent)}
 .langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
@@ -164,10 +167,6 @@ section.block h2::before{display:none}
 .stat{flex:1 1 150px; border:1px solid var(--line); border-radius:14px; padding:18px 16px; text-align:center}
 .stat b{display:block; font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:38px; color:var(--accent); line-height:1.1}
 .stat span{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
-.hud{display:flex; justify-content:space-between; border:1px solid var(--line); border-radius:12px;
-  padding:12px 18px; margin:18px 0 8px; font-family:"Chakra Petch",sans-serif; font-size:13px; letter-spacing:.12em}
-.hud span{color:var(--muted)} .hud b{color:var(--accent); margin-left:8px}
-.hud-warn{font-size:11.5px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; margin:0 0 4px}
 .status-pill{display:inline-block; margin-top:8px; padding:7px 14px; border:1px solid var(--ring); border-radius:999px;
   font-size:13.5px; color:var(--muted)}
 .roadmap{display:flex; flex-direction:column; gap:10px; margin-top:22px}
@@ -179,24 +178,24 @@ section.block h2::before{display:none}
 <div class="wrap wrap-wide">
   <header class="site">
     <a class="brand" href="#top"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
-    <nav class="sitenav"><a href="/ko/" aria-current="page">홈</a><a href="/support/ko/">지원</a><a href="/privacy/ko/">개인정보</a></nav>
+    <nav class="sitenav"><a href="/ko/" aria-current="page">홈</a><a href="/games/ko/">게임</a><a href="/support/ko/">지원</a><a href="/privacy/ko/">개인정보</a></nav>
   </header>
   <main id="top">
     <div class="hero" id="story">
       <img class="hero-logo" src="/brand/logo-full.png" alt="Akavjah Creations">
       <p class="eyebrow">Akavjah Creations / 시작의 기록</p>
       <h1>코드는 한 줄도 써 본 적이 없습니다. <em>그런데도 게임을 만들었습니다.</em></h1>
-      <p class="lede">몇 주 전만 해도 'AI로 만든 앱'이라는 말을 눈곱만큼도 믿지 않았습니다. 그래서 직접, 가장 어려운 방법으로 확인해 보기로 했습니다. 프롬프트 하나, 크래시 하나, 버그 추적 하나씩 — 프로그래밍이라고는 해 본 적 없는 사람이 빈 폴더에서 진짜 Apple 개발자 계정까지, 딱 6일 만에 갈 수 있는지를요.</p>
+      <p class="lede">몇 주 전만 해도 AI가 실제로 출시할 만큼 다듬어진 것을 만들 수 있다고는 믿지 않았습니다 — 데모도, 시제품도 아닌 진짜 출시된 앱을요. 그래서 직접, 가장 어려운 방법으로 확인해 보기로 했습니다. 프롬프트 하나, 크래시 하나, 버그 추적 하나씩 — 프로그래밍이라고는 해 본 적 없는 사람이 빈 폴더에서 진짜 Apple 개발자 계정까지, 딱 6일 만에 갈 수 있는지를요.</p>
       <div class="ctas">
         <a class="btn primary" href="#game">Mad Orbit Dash 보기 →</a>
         <a class="btn ghost" href="#log">개발 로그 읽기</a>
       </div>
-      <div class="steps"><span><b>1</b>회의론자</span><span><b>2</b>첫 프롬프트</span><span><b>3</b>첫 진짜 크래시</span><span><b>4</b>드디어 레벨 50</span><span><b>5</b>Apple 심사 중</span></div>
+      <div class="steps"><span><b>1</b>회의론자</span><span><b>2</b>첫 프롬프트</span><span><b>3</b>첫 진짜 크래시</span><span><b>4</b>드디어 레벨 50</span><span><b>5</b>App Store에 출시됨</span></div>
     </div>
 
     <section class="block">
       <p class="eyebrow">의심했던 이유</p>
-      <h2>'AI로 앱을 만들었다'는 글을 백 개는 봤습니다. 대부분은 데모였지, 앱이 아니었습니다.</h2>
+      <h2>'AI로 앱을 만들었다'는 글을 백 개는 봤습니다. 대부분은 데모였습니다. 실제로 다운로드할 수 있는 건 하나도 없었습니다.</h2>
       <p>저는 개발자가 아닙니다. Swift도 모르고, Xcode도 모르고, 얼마 전까지는 'build target'이 뭔지도 설명할 수 없었습니다. 인터넷에서 본 '바이브 코딩' 이야기는 하나같이 예쁜 스크린샷에서 끝났습니다. 실제 기기, 실제 App Store 심사, 아무도 예상 못 한 방식으로 화면을 두들기는 진짜 플레이어와 부딪히고도 살아남은 것은 하나도 없었습니다.</p>
       <p>그래서 아이디어를 하나 골랐습니다. 끝까지 완성할 수 있을 만큼 작으면서도, 이 방식의 약점을 하나도 빠짐없이 드러낼 만큼 만만치 않은 것으로요. 점 하나가 중심을 돌고, 안으로 조여드는 링의 틈새를 빠져나가는 원탭 아케이드 게임. 설명은 간단합니다. 제대로 만들기는 지독하게 어렵습니다 — 충돌 판정은 정확해야 하고, 난이도는 공정하게 올라가야 하고, 프레임 하나만 어긋나도 그 판은 끝이니까요.</p>
     </section>
@@ -211,7 +210,7 @@ section.block h2::before{display:none}
       <div class="logline"><span class="day">월</span><p>그 버그를 콘솔 로그 33회분을 뒤지며 쫓은 끝에 찾아냈습니다. 게임이 오브를 관문 너머로 보내 놓고는, 한 프레임 뒤에 아직 죽을 수 있다는 사실을 슬쩍 잊어버리고 있었던 겁니다. 수정 완료. 데모 모드가 드디어 최고 레벨에 도달했습니다.</p><span class="tag">로그 파일 33개 · 진짜 원인은 하나</span></div>
       <div class="logline"><span class="day">화</span><p>오리지널 음악과 효과음을 직접 만들고 다듬었습니다 — 탭 소리가 울리지 않도록 0.35초짜리 '팝' 소리 하나를 따로 잘라내는 데까지.</p><span class="tag">오디오 작업 · sfx_tap.wav, 테이크 6</span></div>
       <div class="logline"><span class="day">수</span><p>진짜 Apple 개발자 계정을 등록했고, 승인받았습니다.</p><span class="tag">개발자 계정 · 승인</span></div>
-      <div class="logline"><span class="day">목</span><p>6일째: Mad Orbit Dash는 7월 31일 Apple에 제출되어 지금 심사 대기열에서 승인을 기다리고 있습니다 — 그리고 저는 이미 다음 게임을 만들기 시작했습니다.</p><span class="tag">상태: 심사 중 · 7월 31일 제출</span></div>
+      <div class="logline"><span class="day">목</span><p>6일째: Mad Orbit Dash는 7월 31일 Apple에 제출되었습니다. 한 번 반려되었는데 — iPad Air 11형과 iPhone 17 Pro Max 화면에서 레이아웃이 답답하게 표시되는 문제였습니다 — 그래서 수정을 거친 뒤에야 실제로 출시되었고, 이후 튜토리얼, 7개 언어 추가, 15레벨까지의 무료 체험을 더한 두 번째 버전이 출시되었습니다.</p><span class="tag">상태: 출시됨 · v2 출시</span></div>
       </div>
     </section>
 
@@ -220,16 +219,15 @@ section.block h2::before{display:none}
       <h2>Mad Orbit Dash</h2>
       <p>탭 한 번에 궤도가 반전됩니다. 조작법은 그게 전부입니다. 오래 버틸수록 링은 더 빠르게 안으로 조여들고, 틈새는 좁아지고, 레벨 40쯤 되면 화면 전체가 여러분을 상대로 움직입니다. 일부러 작게 만들었습니다 — 거친 구석 하나하나를 전부 제 손으로 찾아 고칠 수 있을 만큼.</p>
       <div class="stats"><div class="stat"><b>50</b><span>클리어할 레벨</span></div><div class="stat"><b>1</b><span>탭이면 플레이</span></div><div class="stat"><b>0</b><span>직접 손으로 쓴 코드</span></div></div>
-      <div class="hud"><span>BEST<b>—</b></span><span>SCORE<b>—</b></span><span>PREV<b>—</b></span></div>
-      <p class="hud-warn">⚠ 이해를 돕기 위한 이미지 — 실제 게임 화면이 아닙니다</p>
-      <span class="status-pill">7월 31일 제출 · Apple 심사 중</span>
+      <a class="btn primary" href="/games/ko/">두 게임 모두 보기 →</a>
+      <span class="status-pill" style="margin-left:12px">App Store에 출시됨 · 두 번째 버전</span>
     </section>
 
     <section class="block">
       <p class="eyebrow">다음 계획</p>
-      <h2>첫 게임 완성. 애초에 하나로 끝낼 생각이 아니었습니다.</h2>
-      <p>Mad Orbit Dash는 개념 증명이었습니다. 프로그래밍 배경이 전혀 없는 사람도 아이디어를 빈 폴더에서 제출된 앱까지 6일 만에 가져갈 수 있다는 것을요. 지금은 Apple 심사 대기열에 있고, 게임 두 개가 이미 더 진행 중입니다.</p>
-      <div class="roadmap"><span>Mad Orbit Dash — Apple 심사 중</span><span>Fool Me Once — 개발 중</span><span>세 번째 게임 — 초기 구상</span></div>
+      <h2>게임 두 개 출시. 여기서 멈출 이유가 있을까요?</h2>
+      <p>Mad Orbit Dash는 개념 증명이었습니다. 프로그래밍 배경이 전혀 없는 사람도 아이디어를 빈 폴더에서 제출된 앱까지 6일 만에 가져갈 수 있다는 것을요. 출시된 뒤, 튜토리얼과 7개 언어 추가, 15레벨까지 무료 체험을 더해 다시 출시되었습니다. Fool Me Once는 8월 24일에 뒤를 이었습니다. 게임 세 개가 이미 더 개발 중입니다.</p>
+      <div class="roadmap"><span>Mad Orbit Dash — 출시됨, v2</span><span>Fool Me Once — 출시됨</span><span>추가 게임 3종 — 개발 중</span></div>
     </section>
 
     <div class="contact-card">
@@ -243,6 +241,7 @@ section.block h2::before{display:none}
     </div>
   </main>
   <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
     <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko" aria-current="true">한국어</a></nav>
     <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
     <p class="tagline">한때 회의적이었던 개발자가, 프롬프트 하나하나로 만들었습니다.</p>

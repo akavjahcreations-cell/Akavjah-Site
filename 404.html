@@ -21,6 +21,9 @@
     a{color:#0F1424;background:#FFC85C;text-decoration:none;font-size:13.5px;font-weight:600;
       padding:9px 16px;border-radius:8px}
     a.ghost{background:transparent;color:#FFC85C;border:1px solid #4A557E}
+    .social{display:flex;gap:14px;justify-content:center;margin-top:22px}
+    .social a{background:transparent;color:#98A0B8;padding:0;border:none;display:flex;align-items:center}
+    .social a:hover{color:#FFC85C}
   </style>
 </head>
 <body>
@@ -30,19 +33,21 @@
     <p id="p">That page doesn't exist — but here's where to go instead.</p>
     <div class="links">
       <a id="home" href="/en/">Home</a>
+      <a id="games" class="ghost" href="/games/en/">Games</a>
       <a id="support" class="ghost" href="/support/en/">Support</a>
       <a id="privacy" class="ghost" href="/privacy/en/">Privacy</a>
     </div>
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
   </div>
   <script>
-    var T = {"en": {t:"Page not found", p:"That page doesn't exist — but here's where to go instead.", home:"Home", support:"Support", privacy:"Privacy"},
-"fr": {t:"Page introuvable", p:"Cette page n'existe pas — voici où aller à la place.", home:"Accueil", support:"Assistance", privacy:"Confidentialité"},
-"it": {t:"Pagina non trovata", p:"Questa pagina non esiste — ecco dove andare invece.", home:"Home", support:"Assistenza", privacy:"Privacy"},
-"es": {t:"Página no encontrada", p:"Esa página no existe — aquí tienes dónde ir en su lugar.", home:"Inicio", support:"Soporte", privacy:"Privacidad"},
-"de": {t:"Seite nicht gefunden", p:"Diese Seite gibt es nicht — hier geht's stattdessen weiter.", home:"Start", support:"Support", privacy:"Datenschutz"},
-"zh": {t:"页面未找到", p:"该页面不存在——不如去下面这些地方看看。", home:"首页", support:"支持", privacy:"隐私政策"},
-"ja": {t:"ページが見つかりません", p:"そのページは存在しません — 代わりにこちらへどうぞ。", home:"ホーム", support:"サポート", privacy:"プライバシー"},
-"ko": {t:"페이지를 찾을 수 없습니다", p:"해당 페이지는 존재하지 않습니다 — 대신 아래로 이동해 보세요.", home:"홈", support:"지원", privacy:"개인정보"}};
+    var T = {"en": {t:"Page not found", p:"That page doesn't exist — but here's where to go instead.", home:"Home", games:"Games", support:"Support", privacy:"Privacy"},
+"fr": {t:"Page introuvable", p:"Cette page n'existe pas — voici où aller à la place.", home:"Accueil", games:"Jeux", support:"Assistance", privacy:"Confidentialité"},
+"it": {t:"Pagina non trovata", p:"Questa pagina non esiste — ecco dove andare invece.", home:"Home", games:"Giochi", support:"Assistenza", privacy:"Privacy"},
+"es": {t:"Página no encontrada", p:"Esa página no existe — aquí tienes dónde ir en su lugar.", home:"Inicio", games:"Juegos", support:"Soporte", privacy:"Privacidad"},
+"de": {t:"Seite nicht gefunden", p:"Diese Seite gibt es nicht — hier geht's stattdessen weiter.", home:"Start", games:"Spiele", support:"Support", privacy:"Datenschutz"},
+"zh": {t:"页面未找到", p:"该页面不存在——不如去下面这些地方看看。", home:"首页", games:"游戏", support:"支持", privacy:"隐私政策"},
+"ja": {t:"ページが見つかりません", p:"そのページは存在しません — 代わりにこちらへどうぞ。", home:"ホーム", games:"ゲーム", support:"サポート", privacy:"プライバシー"},
+"ko": {t:"페이지를 찾을 수 없습니다", p:"해당 페이지는 존재하지 않습니다 — 대신 아래로 이동해 보세요.", home:"홈", games:"게임", support:"지원", privacy:"개인정보"}};
     var prefs = navigator.languages || [navigator.language || "en"];
     var match = "en";
     for (var i = 0; i < prefs.length; i++) {
@@ -54,6 +59,8 @@
     document.getElementById("p").textContent = d.p;
     document.getElementById("home").textContent = d.home;
     document.getElementById("home").href = "/" + match + "/";
+    document.getElementById("games").textContent = d.games;
+    document.getElementById("games").href = "/games/" + match + "/";
     document.getElementById("support").textContent = d.support;
     document.getElementById("support").href = "/support/" + match + "/";
     document.getElementById("privacy").textContent = d.privacy;

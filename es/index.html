@@ -123,6 +123,9 @@ details p{margin:10px 0 2px; color:var(--muted)}
 .tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
 footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
 .langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
 .langs a{color:var(--muted)}
 .langs a:hover{color:var(--accent)}
 .langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
@@ -164,10 +167,6 @@ section.block h2::before{display:none}
 .stat{flex:1 1 150px; border:1px solid var(--line); border-radius:14px; padding:18px 16px; text-align:center}
 .stat b{display:block; font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:38px; color:var(--accent); line-height:1.1}
 .stat span{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
-.hud{display:flex; justify-content:space-between; border:1px solid var(--line); border-radius:12px;
-  padding:12px 18px; margin:18px 0 8px; font-family:"Chakra Petch",sans-serif; font-size:13px; letter-spacing:.12em}
-.hud span{color:var(--muted)} .hud b{color:var(--accent); margin-left:8px}
-.hud-warn{font-size:11.5px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; margin:0 0 4px}
 .status-pill{display:inline-block; margin-top:8px; padding:7px 14px; border:1px solid var(--ring); border-radius:999px;
   font-size:13.5px; color:var(--muted)}
 .roadmap{display:flex; flex-direction:column; gap:10px; margin-top:22px}
@@ -179,24 +178,24 @@ section.block h2::before{display:none}
 <div class="wrap wrap-wide">
   <header class="site">
     <a class="brand" href="#top"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
-    <nav class="sitenav"><a href="/es/" aria-current="page">Inicio</a><a href="/support/es/">Soporte</a><a href="/privacy/es/">Privacidad</a></nav>
+    <nav class="sitenav"><a href="/es/" aria-current="page">Inicio</a><a href="/games/es/">Juegos</a><a href="/support/es/">Soporte</a><a href="/privacy/es/">Privacidad</a></nav>
   </header>
   <main id="top">
     <div class="hero" id="story">
       <img class="hero-logo" src="/brand/logo-full.png" alt="Akavjah Creations">
       <p class="eyebrow">Akavjah Creations / Registro de origen</p>
       <h1>Nunca he escrito una línea de código. <em>Aun así, he creado un juego.</em></h1>
-      <p class="lede">Hace unas semanas no me fiaba un pelo de las apps «hechas con IA». Entonces decidí comprobarlo por las malas — un prompt, un crash, una caza de bugs cada vez — a ver si alguien que jamás ha programado podía pasar de una carpeta vacía a una cuenta de desarrollador de Apple de verdad en seis días justos.</p>
+      <p class="lede">Hace unas semanas no creía que una IA pudiera de verdad construir algo lo bastante pulido como para publicarlo — ni una demo, ni un prototipo, una app real y publicada. Entonces decidí comprobarlo por las malas — un prompt, un crash, una caza de bugs cada vez — a ver si alguien que jamás ha programado podía pasar de una carpeta vacía a una cuenta de desarrollador de Apple de verdad en seis días justos.</p>
       <div class="ctas">
         <a class="btn primary" href="#game">Ver Mad Orbit Dash →</a>
         <a class="btn ghost" href="#log">Leer el diario de desarrollo</a>
       </div>
-      <div class="steps"><span><b>1</b>Escéptico</span><span><b>2</b>Primer prompt</span><span><b>3</b>Primer crash de verdad</span><span><b>4</b>Nivel 50, por fin</span><span><b>5</b>En revisión de Apple</span></div>
+      <div class="steps"><span><b>1</b>Escéptico</span><span><b>2</b>Primer prompt</span><span><b>3</b>Primer crash de verdad</span><span><b>4</b>Nivel 50, por fin</span><span><b>5</b>En vivo en la App Store</span></div>
     </div>
 
     <section class="block">
       <p class="eyebrow">Por qué dudaba de esto</p>
-      <h2>He visto cien publicaciones de «he creado una app con IA». La mayoría eran demos, no apps.</h2>
+      <h2>He visto cien publicaciones de «he creado una app con IA». La mayoría eran demos. Ninguna era algo que de verdad se pudiera descargar.</h2>
       <p>No soy desarrollador. No sé Swift, no sé Xcode, y hasta hace poco no habría sabido decirte qué es una «build target». Todas las historias de «vibe coding» que había visto por Internet se quedaban en una captura de pantalla bonita — nada que sobreviviera de verdad al contacto con un dispositivo real, con una revisión real del App Store o con un jugador de carne y hueso aporreando la pantalla de formas que nadie había previsto.</p>
       <p>Así que elegí una idea lo bastante pequeña como para terminarla y lo bastante terca como para dejar al descubierto cada debilidad del método: un juego arcade de un solo toque, en el que un punto orbita alrededor de un núcleo y te cuelas por los huecos de unos anillos que se cierran. Fácil de describir. Brutal de hacer bien — la colisión tiene que ser exacta, la dificultad tiene que subir de forma justa, y un solo frame malo acaba con la partida.</p>
     </section>
@@ -211,7 +210,7 @@ section.block h2::before{display:none}
       <div class="logline"><span class="day">LUN</span><p>Perseguí ese bug a lo largo de 33 tandas de registros de consola hasta dar con él: el juego dejaba al orbe cruzar una puerta y luego se olvidaba, sin más, de que aún podía morir un frame después. Arreglado. El modo demo llegó por fin al último nivel.</p><span class="tag">33 archivos de registro · una sola causa real</span></div>
       <div class="logline"><span class="day">MAR</span><p>Compuse y recorté a mano música y efectos de sonido originales — hasta aislar un único «pop» de 0,35 segundos para el sonido del toque, para que no hiciera eco.</p><span class="tag">pasada de audio · sfx_tap.wav, toma 6</span></div>
       <div class="logline"><span class="day">MIÉ</span><p>Registré una cuenta de Apple Developer de verdad, y me la aprobaron.</p><span class="tag">cuenta de desarrollador · aprobada</span></div>
-      <div class="logline"><span class="day">JUE</span><p>Seis días después: Mad Orbit Dash se envió a Apple el 31 de julio y ahora espera su turno en la cola de revisión — y yo ya he empezado a construir el siguiente.</p><span class="tag">estado: en revisión · enviado el 31 de julio</span></div>
+      <div class="logline"><span class="day">JUE</span><p>Seis días después: Mad Orbit Dash se envió a Apple el 31 de julio. Volvió una vez — el diseño quedaba apretado en las pantallas del iPad Air de 11 pulgadas y el iPhone 17 Pro Max — así que hizo falta un ajuste antes de que saliera de verdad, y luego volviera a salir con tutorial, siete idiomas más y una prueba gratuita hasta el nivel 15.</p><span class="tag">estado: en vivo · v2 publicada</span></div>
       </div>
     </section>
 
@@ -220,16 +219,15 @@ section.block h2::before{display:none}
       <h2>Mad Orbit Dash</h2>
       <p>Un toque invierte tu órbita. Ese es todo el esquema de control. Los anillos se cierran hacia dentro más rápido cuanto más sobrevives, los huecos se estrechan, y hacia el nivel 40 todo el tablero se mueve en tu contra. Es pequeño a propósito — lo bastante pequeño como para que cada arista fuera cosa mía encontrarla y pulirla.</p>
       <div class="stats"><div class="stat"><b>50</b><span>niveles por superar</span></div><div class="stat"><b>1</b><span>toque para jugar</span></div><div class="stat"><b>0</b><span>líneas escritas por mí a mano</span></div></div>
-      <div class="hud"><span>BEST<b>—</b></span><span>SCORE<b>—</b></span><span>PREV<b>—</b></span></div>
-      <p class="hud-warn">⚠ Solo con fines ilustrativos — no es gameplay real</p>
-      <span class="status-pill">Enviado el 31 de julio · En revisión de Apple</span>
+      <a class="btn primary" href="/games/es/">Ver ambos juegos →</a>
+      <span class="status-pill" style="margin-left:12px">En vivo en la App Store · Segunda versión</span>
     </section>
 
     <section class="block">
       <p class="eyebrow">Lo que viene</p>
-      <h2>Un juego terminado. Nunca fue la idea quedarse en uno.</h2>
-      <p>Mad Orbit Dash era la prueba de concepto: que alguien sin ninguna experiencia en programación podía llevar una idea de una carpeta vacía a una app enviada en seis días. Ahora está en la cola de revisión de Apple, y ya hay otros dos juegos en marcha.</p>
-      <div class="roadmap"><span>Mad Orbit Dash — En revisión de Apple</span><span>Fool Me Once — En desarrollo</span><span>Juego n.º 3 — Concepto inicial</span></div>
+      <h2>Dos juegos en marcha. ¿Por qué parar ahí?</h2>
+      <p>Mad Orbit Dash era la prueba de concepto: que alguien sin ninguna experiencia en programación podía llevar una idea de una carpeta vacía a una app enviada en seis días. Salió, y luego volvió a salir con un tutorial, siete idiomas más y una prueba gratuita hasta el nivel 15. Fool Me Once llegó el 24 de agosto. Ya hay otros tres juegos en marcha.</p>
+      <div class="roadmap"><span>Mad Orbit Dash — En vivo, v2</span><span>Fool Me Once — En vivo</span><span>Tres juegos más — En desarrollo</span></div>
     </section>
 
     <div class="contact-card">
@@ -243,6 +241,7 @@ section.block h2::before{display:none}
     </div>
   </main>
   <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
     <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es" aria-current="true">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
     <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
     <p class="tagline">Creado por un antiguo escéptico, prompt a prompt.</p>
