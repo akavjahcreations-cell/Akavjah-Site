@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Castle — Soporte</title>
+  <meta name="description" content="Soporte, preguntas frecuentes y solución de problemas de Memory Castle, de Akavjah Creations.">
+  <link rel="canonical" href="https://www.akavjah.com/support/memorycastle/es/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/support/memorycastle/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/support/memorycastle/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/support/memorycastle/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/support/memorycastle/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/support/memorycastle/de/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.akavjah.com/support/memorycastle/pt/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/support/memorycastle/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/support/memorycastle/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/support/memorycastle/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/support/memorycastle/en/" />
+  <link rel="icon" href="/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
+.about-promo .soon{margin:0; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); font-weight:600}
+
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.sitenav{display:flex; gap:22px; font-size:14.5px}
+.sitenav a{color:var(--muted)}
+.sitenav a:hover{color:var(--accent); text-decoration:none}
+.sitenav a[aria-current="page"]{color:var(--accent); font-weight:600}
+.brand-logo{height:34px; width:auto; display:block; border-radius:8px}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.contact-card .contact-logo{
+  flex:none; width:128px; height:128px; border-radius:22px; box-shadow:0 8px 22px rgba(0,0,0,.4);
+}
+.contact-card .contact-info{flex:1 1 200px; min-width:0}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
+.tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Memory Castle - How Far Can You Go!", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "He comprado algo, pero sigue bloqueado.", "acceptedAnswer": {"@type": "Answer", "text": "Toca «Restaurar compras» (en la tienda del juego o en «Ajustes ▸ Compras») con la misma cuenta de Apple con la que compraste. Restaurar no cuesta nada. Si sigue bloqueado, cierra la app por completo y vuelve a abrirla."}}, {"@type": "Question", "name": "¿Cómo empiezo desde una habitación más avanzada?", "acceptedAnswer": {"@type": "Answer", "text": "En el Modo Historia, toca «Mostrar el mapa». Puedes volver a empezar desde cualquier habitación que hayas alcanzado: tu ascenso se guarda cada vez que superas una puerta, por separado para cada dificultad."}}, {"@type": "Question", "name": "¿Necesita conexión a Internet?", "acceptedAnswer": {"@type": "Answer", "text": "No. Memory Castle funciona completamente sin conexión — sin cuenta y sin registro. (Comprar o restaurar una compra pasa por el App Store, que necesita conexión solo en ese momento.)"}}, {"@type": "Question", "name": "¿Se guarda mi progreso?", "acceptedAnswer": {"@type": "Answer", "text": "Sí — tus ascensos guardados, tus mejores puntuaciones y tus ajustes se guardan en tu dispositivo. No hay cuentas, así que nada se respalda en un servidor, y si borras la app se borran con ella."}}, {"@type": "Question", "name": "¿En qué dispositivos funciona?", "acceptedAnswer": {"@type": "Answer", "text": "En cualquier iPhone o iPad con iOS 18 o posterior, incluido el iPhone plegable, plegado o desplegado."}}, {"@type": "Question", "name": "¿Puedo sugerir una habitación o una función?", "acceptedAnswer": {"@type": "Answer", "text": "Claro — mándala por correo. Las ideas pequeñas y concretas son las más fáciles de llevar a la práctica."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://www.akavjah.com/support/memorycastle/"}, {"@type": "ListItem", "position": 3, "name": "Memory Castle - How Far Can You Go!", "item": "https://www.akavjah.com/support/memorycastle/es/"}]}</script>
+  <meta property="og:title" content="Memory Castle — Soporte">
+  <meta property="og:description" content="Soporte, preguntas frecuentes y solución de problemas de Memory Castle, de Akavjah Creations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.akavjah.com/support/memorycastle/og-memorycastle.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.akavjah.com/support/memorycastle/og-memorycastle.png">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/es/"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
+    <nav class="sitenav"><a href="/es/">Inicio</a><a href="/games/es/">Juegos</a><a href="/support/es/" aria-current="page">Soporte</a><a href="/privacy/es/">Privacidad</a></nav>
+  </header>
+  <main>
+    <p class="crumb">Soporte / Memory Castle</p>
+    <section>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-memorycastle.png" alt="" width="44" height="44">Acerca de Memory Castle</h2>
+      <p>Memory Castle es un juego de memoria para iPhone y iPad basado en el método de los loci, la antigua técnica del «palacio de la memoria» que usan los campeones de memoria. Recorre 20 habitaciones pintadas a mano, estudia dónde está cada objeto y luego reconstruye cada habitación de memoria. Las habitaciones 1–3 del Modo Historia son gratis; pequeñas compras únicas desbloquean el resto. Sin anuncios ni suscripciones.</p>
+      <div class="about-promo">
+        <!-- APP STORE BADGE: Memory Castle is not on the App Store yet. When it is live, replace the next line
+             with:  <a class="getit" href="APP-STORE-LINK"><img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/es-es"></a>
+             and put the real App Store link where it says APP-STORE-LINK. -->
+        <p class="soon">Muy pronto en el App Store</p>
+      </div>
+    </section>
+
+    <h1>¿Te has perdido en el castillo? ¿Algo no funciona?</h1>
+    <p class="lede">Aquí no hay sistema de tickets: una sola persona y un buzón de correo de verdad. Esto es lo primero que conviene probar — y cómo escribirme si no es suficiente.</p>
+
+    <section>
+      <h2>Cómo se juega</h2>
+      <p>Cada habitación muestra una serie de objetos, cada uno en su sitio. Estudia dónde está cada cosa — luego la habitación se vacía y arrastras cada objeto desde la bandeja hasta el anillo que le corresponde. Devuelve todos los objetos a su sitio para superar la habitación.</p>
+      <p>«Fácil», «Medio» y «Difícil» fijan cuántos objetos tiene cada habitación — 4, 5 o 6 — y eliges la dificultad por separado en cada modo.</p>
+    </section>
+
+    <section>
+      <h2>Los tres modos</h2>
+      <ul>
+      <li><strong>Modo Historia</strong> — 20 habitaciones. Cada habitación suma un objeto por nivel. Cada tres habitaciones, el Guardián te pide que reconstruyas las tres de memoria, sin pistas. Si fallas un nivel, tienes un intento más; si vuelves a fallar, regresas a la primera habitación de esa parte del castillo. Si superas una puerta, tu ascenso se guarda, por separado para cada dificultad: toca «Mostrar el mapa» para volver a empezar desde cualquier habitación que hayas alcanzado.</li>
+      <li><strong>Modo Contrarreloj</strong> — Cada habitación llega ya montada por completo, y sus objetos aparecen de uno en uno al ritmo de un reloj que ajustas entre 1 y 7 segundos por objeto. El Guardián sigue llegando cada tres habitaciones, y un solo fallo termina la partida.</li>
+      <li><strong>Modo Infinito</strong> — Las habitaciones llegan una tras otra y, tras cada una, reconstruyes todas las que has superado hasta el momento. Un solo fallo termina la partida, y tu puntuación es lo lejos que hayas llegado.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Compras</h2>
+      <p>Las habitaciones 1–3 del Modo Historia son gratis. Todo lo demás es una compra única — sin suscripciones ni anuncios:</p>
+      <ul>
+      <li><strong>Todas las habitaciones</strong> — las habitaciones 4–20, en todos los modos</li>
+      <li><strong>Modo Infinito</strong> — desbloquea el Modo Infinito</li>
+      <li><strong>Modo Contrarreloj</strong> — desbloquea el Modo Contrarreloj</li>
+      <li><strong>Acceso total</strong> — todo el juego</li>
+      <li><strong>Completa el castillo</strong> — disponible si ya tienes exactamente una de las tres compras de arriba; desbloquea todo lo demás</li>
+      </ul>
+      <p class="note">Las compras las gestiona Apple. Para recuperarlas en un dispositivo nuevo o restablecido, toca «Restaurar compras» en la tienda del juego o en «Ajustes ▸ Compras».</p>
+    </section>
+
+    <section>
+      <h2>Ajustes</h2>
+      <ul>
+      <li><strong>Idioma</strong> — inglés, francés, italiano, alemán, español, portugués de Brasil, japonés, coreano o chino simplificado. El juego cambia al instante, sin reiniciar.</li>
+      <li><strong>Música y Efectos de sonido</strong> — actívalos o desactívalos por separado, y elige la canción que suena durante la partida, o «Aleatorio».</li>
+      <li><strong>Cómo jugar</strong> — vuelve a mostrar el tutorial cuando quieras.</li>
+      <li><strong>Restablecer el progreso</strong> — borra tus mejores puntuaciones y los ascensos guardados del Modo Historia en este dispositivo. Las compras se conservan.</li>
+      <li><strong>Créditos</strong> — la música y los efectos de sonido se crearon con Gemini.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Solución de problemas</h2>
+      <p>Prueba estos pasos en orden antes de escribir — la mayoría de los problemas se resuelven con los dos primeros.</p>
+      <ol>
+      <li>Asegúrate de tener la última versión de Memory Castle en el App Store.</li>
+      <li>Cierra la app por completo y vuelve a abrirla.</li>
+      <li>Reinicia el dispositivo.</li>
+      <li>Comprueba que iOS o iPadOS está actualizado y que te queda algo de espacio libre.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Informar de un error</h2>
+      <p>Si sigue pasando, escríbeme indicando:</p>
+      <ul>
+      <li>El modelo de tu dispositivo (p. ej., iPhone 14, iPad Air)</li>
+      <li>En qué modo, dificultad y habitación ocurrió</li>
+      <li>Qué esperabas que pasara y qué pasó en realidad</li>
+      <li>Una captura de pantalla o una grabación, si puedes</li>
+      </ul>
+      <p class="note">Cada habitación tiene una única disposición correcta. Así que, si un objeto que estabas seguro de haber colocado bien no contó, la causa real casi siempre se esconde en esos detalles, y cuanto más concreto seas, antes queda arreglado.</p>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>He comprado algo, pero sigue bloqueado.</summary>
+      <p>Toca «Restaurar compras» (en la tienda del juego o en «Ajustes ▸ Compras») con la misma cuenta de Apple con la que compraste. Restaurar no cuesta nada. Si sigue bloqueado, cierra la app por completo y vuelve a abrirla.</p>
+    </details>
+    <details>
+      <summary>¿Cómo empiezo desde una habitación más avanzada?</summary>
+      <p>En el Modo Historia, toca «Mostrar el mapa». Puedes volver a empezar desde cualquier habitación que hayas alcanzado: tu ascenso se guarda cada vez que superas una puerta, por separado para cada dificultad.</p>
+    </details>
+    <details>
+      <summary>¿Necesita conexión a Internet?</summary>
+      <p>No. Memory Castle funciona completamente sin conexión — sin cuenta y sin registro. (Comprar o restaurar una compra pasa por el App Store, que necesita conexión solo en ese momento.)</p>
+    </details>
+    <details>
+      <summary>¿Se guarda mi progreso?</summary>
+      <p>Sí — tus ascensos guardados, tus mejores puntuaciones y tus ajustes se guardan en tu dispositivo. No hay cuentas, así que nada se respalda en un servidor, y si borras la app se borran con ella.</p>
+    </details>
+    <details>
+      <summary>¿En qué dispositivos funciona?</summary>
+      <p>En cualquier iPhone o iPad con iOS 18 o posterior, incluido el iPhone plegable, plegado o desplegado.</p>
+    </details>
+    <details>
+      <summary>¿Puedo sugerir una habitación o una función?</summary>
+      <p>Claro — mándala por correo. Las ideas pequeñas y concretas son las más fáciles de llevar a la práctica.</p>
+    </details>
+    </section>
+
+    <section>
+      <h2>¿Sigues atascado?</h2>
+      <p>Escríbeme cuando quieras — leo personalmente todos los correos y te responderé lo antes posible.</p>
+    </section>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <p class="label">Contacto</p>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">Dirección postal</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
+      </div>
+      <img class="contact-logo" src="/brand/logo-small.png" alt="Akavjah Creations">
+    </div>
+  </main>
+  <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es" aria-current="true">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../pt/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
+    <p class="tagline">Creado por un antiguo escéptico, prompt a prompt.</p>
+  </footer>
+</div>
+</body>
+</html>

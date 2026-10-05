@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos — Akavjah Creations</title>
+  <meta name="description" content="Os jogos da Akavjah Creations para iPhone: Mad Orbit Dash e Fool Me Once.">
+  <link rel="canonical" href="https://www.akavjah.com/games/pt/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/games/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/games/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/games/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/games/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/games/de/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.akavjah.com/games/pt/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/games/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/games/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/games/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/games/en/" />
+  <link rel="icon" href="/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.sitenav{display:flex; gap:22px; font-size:14.5px}
+.sitenav a{color:var(--muted)}
+.sitenav a:hover{color:var(--accent); text-decoration:none}
+.sitenav a[aria-current="page"]{color:var(--accent); font-weight:600}
+.brand-logo{height:34px; width:auto; display:block; border-radius:8px}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.contact-card .contact-logo{
+  flex:none; width:128px; height:128px; border-radius:22px; box-shadow:0 8px 22px rgba(0,0,0,.4);
+}
+.contact-card .contact-info{flex:1 1 200px; min-width:0}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
+.tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+
+.hub-h1{margin-top:64px}
+.games-intro{color:var(--muted); font-size:16px; margin:10px 0 0}
+.game-cards{display:flex; gap:18px; flex-wrap:wrap; margin-top:32px}
+.game-card{flex:1 1 180px; padding:24px; border:1px solid var(--line); border-radius:16px;
+  display:flex; flex-direction:column; gap:10px}
+.game-card img{width:60px; height:60px; border-radius:14px}
+.game-card .g-name{font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:20px; color:var(--ink)}
+.game-card .g-blurb{color:var(--muted); font-size:14.5px; line-height:1.5}
+.game-card .g-badge{margin-top:6px}
+.game-card .g-soon{margin-top:6px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:600}
+.game-card .g-badge img{width:auto; height:44px; border-radius:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/pt/"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
+    <nav class="sitenav"><a href="/pt/">Início</a><a href="/games/pt/" aria-current="page">Jogos</a><a href="/support/pt/">Suporte</a><a href="/privacy/pt/">Privacidade</a></nav>
+  </header>
+  <main>
+    <h1 class="hub-h1">Nossos jogos</h1>
+    <p class="games-intro">Três jogos. Fáceis de aprender, difíceis de soltar.</p>
+    <div class="game-cards">
+      <div class="game-card">
+        <img src="/support/madorbitdash/icon-madorbitdash.png" alt="">
+        <span class="g-name">Mad Orbit Dash</span>
+        <span class="g-blurb">Arcade orbital de um toque. Cinquenta níveis, os anéis se fechando.</span>
+        <a class="g-badge" href="https://apps.apple.com/us/app/mad-orbit-dash/id6796168613" target="_blank" rel="noopener"><img alt="Ver na App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br"></a>
+      </div>
+      <div class="game-card">
+        <img src="/support/foolmeonce/icon-foolmeonce.png" alt="">
+        <span class="g-name">Fool Me Once</span>
+        <span class="g-blurb">100 tabuleiros. Uma instrução. Não se deixe enganar duas vezes.</span>
+        <a class="g-badge" href="https://apps.apple.com/us/app/fool-me-once-trap-game/id6800496615" target="_blank" rel="noopener"><img alt="Ver na App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br"></a>
+      </div>
+      <div class="game-card">
+        <img src="/support/memorycastle/icon-memorycastle.png" alt="">
+        <span class="g-name">Memory Castle</span>
+        <span class="g-blurb">20 salas pintadas à mão. Lembre-se de onde tudo vai.</span>
+        <!-- APP STORE BADGE: replace the next line with the badge line from the card above, using Memory Castle's App Store link, once the app is live. -->
+        <span class="g-soon">Em breve na App Store</span>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <p class="label">Contato</p>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">Endereço postal</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
+      </div>
+      <img class="contact-logo" src="/brand/logo-small.png" alt="Akavjah Creations">
+    </div>
+  </main>
+  <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../pt/" lang="pt-BR" hreflang="pt-BR" aria-current="true">Português</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
+  </footer>
+</div>
+</body>
+</html>
+</content>
