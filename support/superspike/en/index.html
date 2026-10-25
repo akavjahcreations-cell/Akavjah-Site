@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super-Spike: Ultimate League — Support</title>
+  <meta name="description" content="Support, FAQ, and troubleshooting for Super-Spike: Ultimate League by Akavjah Creations.">
+  <link rel="canonical" href="https://www.akavjah.com/support/superspike/en/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/support/superspike/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/support/superspike/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/support/superspike/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/support/superspike/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/support/superspike/de/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.akavjah.com/support/superspike/pt/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/support/superspike/zh/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.akavjah.com/support/superspike/zh-hant/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/support/superspike/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/support/superspike/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/support/superspike/en/" />
+  <link rel="icon" href="/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .clip.wide{width:min(320px,100%)}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
+.about-promo .soon{margin:0; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); font-weight:600}
+
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.sitenav{display:flex; gap:22px; font-size:14.5px}
+.sitenav a{color:var(--muted)}
+.sitenav a:hover{color:var(--accent); text-decoration:none}
+.sitenav a[aria-current="page"]{color:var(--accent); font-weight:600}
+.brand-logo{height:34px; width:auto; display:block; border-radius:8px}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.contact-card .contact-logo{
+  flex:none; width:128px; height:128px; border-radius:22px; box-shadow:0 8px 22px rgba(0,0,0,.4);
+}
+.contact-card .contact-info{flex:1 1 200px; min-width:0}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
+.tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Super-Spike: Ultimate League", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I bought something, but it's still locked.", "acceptedAnswer": {"@type": "Answer", "text": "Tap “Restore Purchases” (in the Store, or at the bottom of Options) while signed in with the same Apple Account you bought it with. There's no charge to restore. If it still looks locked, force-close the app and reopen it."}}, {"@type": "Question", "name": "I bought a board, but I can't play on it yet.", "acceptedAnswer": {"@type": "Answer", "text": "That's expected. Boards open in League order: win a Full Match on the board before it, on any difficulty, and it opens for every mode."}}, {"@type": "Question", "name": "My timing feels off.", "acceptedAnswer": {"@type": "Answer", "text": "The game learns your timing as you play, separately for touch and for a controller. For a fresh start, use Options ▸ Calibrate timing. It takes about 15 seconds."}}, {"@type": "Question", "name": "Does it need an internet connection?", "acceptedAnswer": {"@type": "Answer", "text": "No. Super-Spike plays fully offline, with no account and no login. (Buying or restoring a purchase goes through the App Store, which needs a connection just for that moment.)"}}, {"@type": "Question", "name": "Is my progress saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your progress and settings are stored on your device. If iCloud is on, the boards you've opened and the tutorials you've finished also follow you to your other iPhone and iPad, through your own iCloud account."}}, {"@type": "Question", "name": "Do I have to play in landscape?", "acceptedAnswer": {"@type": "Answer", "text": "No. Super-Spike plays in any orientation, though landscape gives you the widest view of the court."}}, {"@type": "Question", "name": "Which devices does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any iPhone or iPad with iOS 18 or later, including the foldable iPhone, folded or unfolded."}}, {"@type": "Question", "name": "Can I suggest a feature or a new athlete?", "acceptedAnswer": {"@type": "Answer", "text": "Always. Email it over. Small-scope ideas are the easiest to actually act on."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://www.akavjah.com/support/superspike/"}, {"@type": "ListItem", "position": 3, "name": "Super-Spike: Ultimate League", "item": "https://www.akavjah.com/support/superspike/en/"}]}</script>
+  <meta property="og:title" content="Super-Spike: Ultimate League — Support">
+  <meta property="og:description" content="Support, FAQ, and troubleshooting for Super-Spike: Ultimate League by Akavjah Creations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.akavjah.com/support/superspike/og-superspike.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.akavjah.com/support/superspike/og-superspike.png">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/en/"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
+    <nav class="sitenav"><a href="/en/">Home</a><a href="/games/en/">Games</a><a href="/support/en/" aria-current="page">Support</a><a href="/privacy/en/">Privacy</a></nav>
+  </header>
+  <main>
+    <p class="crumb">Support / Super-Spike</p>
+    <section>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-superspike.png" alt="" width="44" height="44">About Super-Spike</h2>
+      <p>Super-Spike: Ultimate League is a fast, flashy 2v2 beach volleyball game for iPhone and iPad. Time every dig, set and spike, unleash cinematic special moves, and climb the Ultimate League across six beaches. Sunset Cove and four athletes are free; small one-time purchases add more boards and athletes. No ads, no subscriptions.</p>
+      <div class="about-promo">
+        <p class="soon">Coming soon to the App Store</p>
+      </div>
+    </section>
+
+    <h1>Missed the ball? Something not working?</h1>
+    <p class="lede">This is a one-person operation, so support means a real inbox, not a ticket queue. Here's what to try first, and how to reach me if that doesn't cover it.</p>
+
+    <section>
+      <h2>How to play</h2>
+      <p>A glowing ring shows where the ball is headed. Press as the ring closes to dig, set and spike. The closer your timing, the better the touch, and a PERFECT touch sends the ball screaming over the net. To serve, pick your serve, toss the ball and strike at the top.</p>
+      <p>Every good touch fills your special gauge. When it's full, unleash your athlete's special spike. When a rival unleashes theirs, a charged gauge lets you answer with a COUNTER.</p>
+      <p>New to the game? The guided tutorial teaches every button step by step, and the Arcade lesson covers moving, switching players and soft shots. Replay either one any time from Options.</p>
+    </section>
+
+    <section>
+      <h2>Ways to play</h2>
+      <ul>
+      <li><strong>Basic</strong>: you dig and spike, and your partner sets you up.</li>
+      <li><strong>Basic Duo</strong>: you take every touch yourself: dig, set and spike.</li>
+      <li><strong>Arcade</strong>: run your athlete across the sand, switch players at will, aim your spikes, block at the net, and play soft shots like tips, dumps and free balls.</li>
+      </ul>
+      <p>Match types:</p>
+      <ul>
+      <li><strong>Ultimate League</strong>: win a Full Match on a board to open the next one, all the way to the trophy.</li>
+      <li><strong>Quick Match</strong>: a shorter game on any board you've opened.</li>
+      <li><strong>Practice</strong>: play with helpful tips along the way.</li>
+      <li><strong>Spectate</strong>: sit back and watch the computer play both sides.</li>
+      </ul>
+      <p>Four difficulty levels, from Easy to Legendary.</p>
+    </section>
+
+    <section>
+      <h2>Purchases</h2>
+      <p>Sunset Cove and four athletes (Kai, Mila, Sol and Nova) are free. Everything else is an optional one-time purchase: no subscriptions, no ads.</p>
+      <ul>
+      <li><strong>Boards</strong>: Seine Side, Copa Sol, Sahara Shore, Riptide Tempest and Aurora Fjord</li>
+      <li><strong>Athletes</strong>: Zane Okafor, Rex Malone, Luna Ito, Dre Okoye, Isla Moreau, Bruno Vega and Coral Kahale, each with their own special move</li>
+      <li><strong>Board Pack</strong>: all five boards</li>
+      <li><strong>Athlete Pack</strong>: all seven athletes</li>
+      <li><strong>Ultimate Bundle</strong>: all five boards and all seven athletes</li>
+      </ul>
+      <p>Athletes are ready to play the moment you buy them. Boards join your League and open in order: win a Full Match on the board before it (on any difficulty) to open the next.</p>
+      <p class="note">Purchases are handled by Apple. To get them back on a new or reset device, tap “Restore Purchases” in the Store or at the bottom of Options.</p>
+    </section>
+
+    <section>
+      <h2>Options</h2>
+      <ul>
+      <li><strong>Language</strong>: English, French, Italian, German, Spanish, Brazilian Portuguese, Japanese, Korean, Traditional Chinese or Simplified Chinese. This changes the game's language only, not your device's.</li>
+      <li><strong>Music, Sound effects and Vibration</strong>: turn each on or off. Sound follows your Silent switch, and a game controller rumbles instead of vibrating.</li>
+      <li><strong>Graphics</strong>: three levels. Pick a lower one for longer battery life on older devices.</li>
+      <li><strong>Controls</strong>: left-handed buttons, stick sensitivity, Calibrate timing (about 15 seconds), and a reset for touch timing and controller timing.</li>
+      <li><strong>Tutorial</strong>: replay the tutorial or the Arcade lesson.</li>
+      <li><strong>Credits</strong>: music created with Gemini, sound effects created with ChatGPT.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Playing with a controller</h2>
+      <p>PlayStation, Xbox, Nintendo and MFi controllers all work, and the game shows your controller's own button symbols. Pair it in your device's Settings ▸ Bluetooth, then open the game. You can switch between touch and the controller at any time.</p>
+    </section>
+
+    <section>
+      <h2>Troubleshooting</h2>
+      <p>Try these in order before emailing. Most issues clear up in the first two steps.</p>
+      <ol>
+      <li>Make sure you're on the latest version of Super-Spike from the App Store.</li>
+      <li>Force-close the app and reopen it.</li>
+      <li>Restart your device.</li>
+      <li>Check that iOS or iPadOS itself is up to date and you have some free storage.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Reporting a bug</h2>
+      <p>If it's still happening, email me with:</p>
+      <ul>
+      <li>Your device model (e.g. iPhone 16, iPad Air)</li>
+      <li>Whether you were using touch or a controller (and which one)</li>
+      <li>The board, control style and difficulty</li>
+      <li>What you expected vs. what actually happened</li>
+      <li>A screenshot or screen recording, if you can grab one</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Frequently asked</h2>
+    <details>
+      <summary>I bought something, but it's still locked.</summary>
+      <p>Tap “Restore Purchases” (in the Store, or at the bottom of Options) while signed in with the same Apple Account you bought it with. There's no charge to restore. If it still looks locked, force-close the app and reopen it.</p>
+    </details>
+    <details>
+      <summary>I bought a board, but I can't play on it yet.</summary>
+      <p>That's expected. Boards open in League order: win a Full Match on the board before it, on any difficulty, and it opens for every mode.</p>
+    </details>
+    <details>
+      <summary>My timing feels off.</summary>
+      <p>The game learns your timing as you play, separately for touch and for a controller. For a fresh start, use Options ▸ Calibrate timing. It takes about 15 seconds.</p>
+    </details>
+    <details>
+      <summary>Does it need an internet connection?</summary>
+      <p>No. Super-Spike plays fully offline, with no account and no login. (Buying or restoring a purchase goes through the App Store, which needs a connection just for that moment.)</p>
+    </details>
+    <details>
+      <summary>Is my progress saved?</summary>
+      <p>Yes. Your progress and settings are stored on your device. If iCloud is on, the boards you've opened and the tutorials you've finished also follow you to your other iPhone and iPad, through your own iCloud account.</p>
+    </details>
+    <details>
+      <summary>Do I have to play in landscape?</summary>
+      <p>No. Super-Spike plays in any orientation, though landscape gives you the widest view of the court.</p>
+    </details>
+    <details>
+      <summary>Which devices does it run on?</summary>
+      <p>Any iPhone or iPad with iOS 18 or later, including the foldable iPhone, folded or unfolded.</p>
+    </details>
+    <details>
+      <summary>Can I suggest a feature or a new athlete?</summary>
+      <p>Always. Email it over. Small-scope ideas are the easiest to actually act on.</p>
+    </details>
+    </section>
+
+    <section>
+      <h2>Still stuck?</h2>
+      <p>Reach out anytime. I read every email myself and I'll get back to you as soon as I can.</p>
+    </section>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <p class="label">Contact</p>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">Mailing address</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
+      </div>
+      <img class="contact-logo" src="/brand/logo-small.png" alt="Akavjah Creations">
+    </div>
+  </main>
+  <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en" aria-current="true">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../pt/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
+    <p class="tagline">Built by a former skeptic, one prompt at a time.</p>
+  </footer>
+</div>
+</body>
+</html>

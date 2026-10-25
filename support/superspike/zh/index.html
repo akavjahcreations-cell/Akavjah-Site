@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super-Spike: Ultimate League — 支持</title>
+  <meta name="description" content="Akavjah Creations 出品的 Super-Spike: Ultimate League 支持、常见问题与故障排查。">
+  <link rel="canonical" href="https://www.akavjah.com/support/superspike/zh/">
+  <link rel="alternate" hreflang="en" href="https://www.akavjah.com/support/superspike/en/" />
+  <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/support/superspike/fr/" />
+  <link rel="alternate" hreflang="it" href="https://www.akavjah.com/support/superspike/it/" />
+  <link rel="alternate" hreflang="es" href="https://www.akavjah.com/support/superspike/es/" />
+  <link rel="alternate" hreflang="de" href="https://www.akavjah.com/support/superspike/de/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://www.akavjah.com/support/superspike/pt/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/support/superspike/zh/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.akavjah.com/support/superspike/zh-hant/" />
+  <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/support/superspike/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/support/superspike/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/support/superspike/en/" />
+  <link rel="icon" href="/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+.about-promo{display:flex; align-items:center; gap:22px; margin:18px 0 6px; flex-wrap:wrap}
+.about-promo .clip{flex:none; width:150px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+  display:block; line-height:0; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.about-promo .clip video{width:100%; height:auto; display:block}
+.about-promo .clip.wide{width:min(320px,100%)}
+.about-promo .getit{flex:none}
+.about-promo .getit img{height:54px; width:auto; display:block}
+.app-icon{width:44px; height:44px; border-radius:11px; vertical-align:-12px; margin-right:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.about-h2::before{content:none}
+.about-promo .soon{margin:0; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); font-weight:600}
+
+:root{
+  --bg:#0F1424; --ink:#EAEAF2; --muted:#98A0B8; --accent:#FFC85C;
+  --ring:#4A557E; --line:#242C48; --maxw:680px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,
+    "PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
+    "Apple SD Gothic Neo","Malgun Gothic","Microsoft YaHei",sans-serif;
+  line-height:1.7; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.site{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 0 0;
+}
+.brand{display:flex; align-items:center; gap:11px; color:var(--ink)}
+.brand svg{display:block}
+.brand .word{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+}
+.sitenav{display:flex; gap:22px; font-size:14.5px}
+.sitenav a{color:var(--muted)}
+.sitenav a:hover{color:var(--accent); text-decoration:none}
+.sitenav a[aria-current="page"]{color:var(--accent); font-weight:600}
+.brand-logo{height:34px; width:auto; display:block; border-radius:8px}
+.crumb{
+  margin:52px 0 10px; font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent);
+}
+h1{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:700; font-size:clamp(28px,6vw,40px); line-height:1.22;
+  margin:0 0 18px; letter-spacing:.01em;
+}
+.lede{color:var(--muted); font-size:18px; margin:0 0 8px}
+.updated{color:var(--muted); font-size:14px; margin:14px 0 0}
+main{padding-bottom:8px}
+section{margin-top:52px}
+h2{
+  font-family:"Chakra Petch",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:600; font-size:20px; margin:0 0 14px; display:flex; align-items:center; gap:10px;
+}
+h2::before{
+  content:""; width:11px; height:11px; border-radius:50%;
+  border:2px solid var(--ring); flex:none;
+  background:radial-gradient(circle at 78% 22%, var(--accent) 0 32%, transparent 34%);
+}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 14px; padding-left:1.4em}
+li{margin:6px 0}
+ol li::marker{color:var(--accent); font-weight:600}
+ul li::marker{color:var(--ring)}
+details{
+  border-top:1px solid var(--line); padding:14px 2px;
+}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{
+  cursor:pointer; font-weight:600; list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; color:var(--accent); font-weight:600; font-size:18px; flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 2px; color:var(--muted)}
+.note{color:var(--muted)}
+.contact-card{
+  margin-top:56px; padding:26px 24px; border:1px solid var(--line); border-radius:14px;
+  background:linear-gradient(160deg, rgba(255,200,92,.05), rgba(255,200,92,0) 55%);
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.contact-card .contact-logo{
+  flex:none; width:128px; height:128px; border-radius:22px; box-shadow:0 8px 22px rgba(0,0,0,.4);
+}
+.contact-card .contact-info{flex:1 1 200px; min-width:0}
+.contact-card .label{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px;
+}
+.contact-card a{font-size:19px; font-weight:600; word-break:break-all}
+.contact-card .addr-label{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:20px 0 6px;
+}
+.contact-card .addr{font-size:14.5px; color:var(--ink); line-height:1.6; margin:0}
+.tm{font-size:.5em; vertical-align:super; margin-left:2px; font-weight:400; letter-spacing:0}
+footer.site{margin-top:56px; padding:26px 0 44px; border-top:1px solid var(--line)}
+.langs{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:14px; margin:0 0 20px}
+.social{display:flex; gap:14px; margin:0 0 18px}
+.social a{color:var(--muted); display:flex; align-items:center}
+.social a:hover{color:var(--accent)}
+.langs a{color:var(--muted)}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{color:var(--accent); font-weight:600; text-decoration:none}
+.copy{color:var(--muted); font-size:13.5px; margin:0}
+.tagline{color:var(--muted); font-size:13.5px; font-style:italic; margin:4px 0 0}
+</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Super-Spike: Ultimate League", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我已经购买了，但内容仍然是锁定的。", "acceptedAnswer": {"@type": "Answer", "text": "请登录当初购买时使用的同一个 Apple 账户，然后点按“恢复购买”（在商店中，或在“选项”底部）。恢复购买不会再次收费。如果仍显示锁定，请彻底关闭应用后重新打开。"}}, {"@type": "Question", "name": "我买了一个球场，但还不能在上面比赛。", "acceptedAnswer": {"@type": "Answer", "text": "这是正常的。球场按联赛顺序开放：在它之前的那个球场上赢下一场完整比赛（任何难度均可），它就会在所有模式中开放。"}}, {"@type": "Question", "name": "感觉按键时机不太对。", "acceptedAnswer": {"@type": "Answer", "text": "游戏会在你游玩时学习你的按键时机，触控和手柄分别学习。如果想从头来过，请使用“选项 ▸ 校准按键时机”，大约只需 15 秒。"}}, {"@type": "Question", "name": "需要联网吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。Super-Spike 完全离线运行——无需账号，无需登录。（购买或恢复购买需通过 App Store，只有在那一刻才需要联网。）"}}, {"@type": "Question", "name": "我的进度会保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "会。你的进度和设置都保存在设备上。如果开启了 iCloud，你已开放的球场和已完成的教学还会通过你自己的 iCloud 账户，跟随你来到你的其他 iPhone 和 iPad。"}}, {"@type": "Question", "name": "必须横屏玩吗？", "acceptedAnswer": {"@type": "Answer", "text": "不必。Super-Spike 支持任意屏幕方向，不过横屏能看到最开阔的球场视野。"}}, {"@type": "Question", "name": "支持哪些设备？", "acceptedAnswer": {"@type": "Answer", "text": "任何运行 iOS 18 或更高版本的 iPhone 或 iPad，包括折叠屏 iPhone，折叠或展开均可。"}}, {"@type": "Question", "name": "可以提议新功能或新运动员吗？", "acceptedAnswer": {"@type": "Answer", "text": "随时欢迎——发邮件即可。范围小而明确的建议最容易真正落地。"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Akavjah Creations", "item": "https://www.akavjah.com/"}, {"@type": "ListItem", "position": 2, "name": "支持", "item": "https://www.akavjah.com/support/superspike/"}, {"@type": "ListItem", "position": 3, "name": "Super-Spike: Ultimate League", "item": "https://www.akavjah.com/support/superspike/zh/"}]}</script>
+  <meta property="og:title" content="Super-Spike: Ultimate League — 支持">
+  <meta property="og:description" content="Akavjah Creations 出品的 Super-Spike: Ultimate League 支持、常见问题与故障排查。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.akavjah.com/support/superspike/og-superspike.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.akavjah.com/support/superspike/og-superspike.png">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/zh/"><img class="brand-logo" src="/brand/logo-small.png" alt="Akavjah Creations"><span class="word">Akavjah Creations<sup class="tm">™</sup></span></a>
+    <nav class="sitenav"><a href="/zh/">首页</a><a href="/games/zh/">游戏</a><a href="/support/zh/" aria-current="page">支持</a><a href="/privacy/zh/">隐私政策</a></nav>
+  </header>
+  <main>
+    <p class="crumb">支持 / Super-Spike</p>
+    <section>
+      <h2 class="about-h2"><img class="app-icon" src="../icon-superspike.png" alt="" width="44" height="44">关于 Super-Spike</h2>
+      <p>Super-Spike: Ultimate League 是一款适用于 iPhone 和 iPad 的 2v2 沙滩排球游戏，节奏飞快、画面炫目。卡准每一次垫球、传球和扣球的时机，释放电影级必杀技，转战六大海滩，一路征战 Ultimate League。日落海湾和四位运动员免费；更多球场和运动员可通过小额一次性购买添加。无广告，无订阅。</p>
+      <div class="about-promo">
+        <p class="soon">即将登陆 App Store</p>
+      </div>
+    </section>
+
+    <h1>没接到球？还是有什么问题？</h1>
+    <p class="lede">这里没有工单系统——只有一个人和一个真实的邮箱。请先按下面的方法试一试；如果还是解决不了，欢迎直接联系我。</p>
+
+    <section>
+      <h2>玩法说明</h2>
+      <p>发光的圆环会标出球的落点。在圆环收拢时按下，即可垫球、传球和扣球。时机越准，触球质量就越好；打出“完美”触球，球就会呼啸着飞过球网。发球时，先选好发球方式，把球抛起，再在最高点击球。</p>
+      <p>每一次漂亮的触球都会为你的必杀槽积攒能量。必杀槽集满后，就能释放运动员专属的必杀扣球。当对手释放必杀技时，只要你的必杀槽已经蓄满，就能用“反制！”回敬对方。</p>
+      <p>第一次玩？引导式教学会一步步教会你每个按钮的用法，街机课程则涵盖移动、切换球员和轻打技巧。两者都可以随时在“选项”中重看。</p>
+    </section>
+
+    <section>
+      <h2>游戏方式</h2>
+      <ul>
+      <li><strong>基础</strong>：你负责垫球和扣球，搭档帮你传球。</li>
+      <li><strong>基础双控</strong>：每一次触球都由你亲自完成——垫球、传球、扣球。</li>
+      <li><strong>街机</strong>：操控运动员在沙滩上奔跑，随时切换球员，瞄准扣球方向，在网前拦网，还能打出吊球、二次球和机会球等轻打技巧。</li>
+      </ul>
+      <p>比赛类型：</p>
+      <ul>
+      <li><strong>Ultimate League</strong>：在一个球场上赢下完整比赛，即可开放下一个球场，一路打到捧起奖杯。</li>
+      <li><strong>快速比赛</strong>：在任意已开放的球场上来一场更短的比赛。</li>
+      <li><strong>练习</strong>：边打边获得实用提示。</li>
+      <li><strong>观战</strong>：轻松坐下，看电脑操控双方对决。</li>
+      </ul>
+      <p>共有四个难度等级，从“简单”到“传奇”。</p>
+    </section>
+
+    <section>
+      <h2>购买</h2>
+      <p>日落海湾和四位运动员（Kai、Mila、Sol 和 Nova）免费。其余内容均为可选的一次性购买——无订阅，无广告。</p>
+      <ul>
+      <li><strong>球场</strong>：塞纳河畔、Copa Sol、撒哈拉海岸、怒涛风暴和极光峡湾</li>
+      <li><strong>运动员</strong>：Zane Okafor、Rex Malone、Luna Ito、Dre Okoye、Isla Moreau、Bruno Vega 和 Coral Kahale，每位都有自己的必杀技</li>
+      <li><strong>球场包</strong>：全部五个球场</li>
+      <li><strong>运动员包</strong>：全部七位运动员</li>
+      <li><strong>终极组合包</strong>：全部五个球场和全部七位运动员</li>
+      </ul>
+      <p>运动员一经购买即可上场。球场会加入你的联赛，并按顺序开放：在前一个球场上赢下一场完整比赛（任何难度均可），即可开放下一个。</p>
+      <p class="note">购买由 Apple 处理。如需在新设备或重置后的设备上找回已购项目，请在商店中或“选项”底部点按“恢复购买”。</p>
+    </section>
+
+    <section>
+      <h2>选项</h2>
+      <ul>
+      <li><strong>语言</strong>：英语、法语、意大利语、德语、西班牙语、巴西葡萄牙语、日语、韩语、繁体中文或简体中文。只会更改游戏的语言，不会影响设备的语言设置。</li>
+      <li><strong>音乐、音效和振动</strong>：可分别开启或关闭。声音会跟随设备的静音开关；使用游戏手柄时，改由手柄振动反馈。</li>
+      <li><strong>画面</strong>：三个等级。在较旧的设备上选择较低的等级，电池续航更持久。</li>
+      <li><strong>操控</strong>：左手按钮布局、摇杆灵敏度、校准按键时机（大约 15 秒），以及重置触控按键时机和手柄按键时机。</li>
+      <li><strong>教学</strong>：重看教学或街机课程。</li>
+      <li><strong>制作名单</strong>：音乐由 Gemini 制作，音效由 ChatGPT 制作。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>使用手柄游玩</h2>
+      <p>PlayStation、Xbox、Nintendo 和 MFi 手柄均可使用，游戏会显示你手柄上对应的按键符号。请先在设备的“设置 ▸ 蓝牙”中完成配对，再打开游戏。触控和手柄可以随时切换。</p>
+    </section>
+
+    <section>
+      <h2>故障排查</h2>
+      <p>建议按顺序尝试以下步骤，再决定是否来信——多数问题在前两步就能解决。</p>
+      <ol>
+      <li>确认已从 App Store 更新到最新版本的 Super-Spike。</li>
+      <li>彻底关闭应用后重新打开。</li>
+      <li>重启设备。</li>
+      <li>检查 iOS 或 iPadOS 是否为最新版本，并确保设备还有一定的可用存储空间。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>反馈问题</h2>
+      <p>如果问题仍然存在，请发邮件告诉我：</p>
+      <ul>
+      <li>你的设备型号（例如 iPhone 16、iPad Air）</li>
+      <li>当时使用的是触控还是手柄（如果是手柄，是哪一款）</li>
+      <li>在哪个球场、哪种操控方式、哪个难度出的问题</li>
+      <li>你预期发生什么，实际又发生了什么</li>
+      <li>如果方便，附上截图或录屏</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+    <details>
+      <summary>我已经购买了，但内容仍然是锁定的。</summary>
+      <p>请登录当初购买时使用的同一个 Apple 账户，然后点按“恢复购买”（在商店中，或在“选项”底部）。恢复购买不会再次收费。如果仍显示锁定，请彻底关闭应用后重新打开。</p>
+    </details>
+    <details>
+      <summary>我买了一个球场，但还不能在上面比赛。</summary>
+      <p>这是正常的。球场按联赛顺序开放：在它之前的那个球场上赢下一场完整比赛（任何难度均可），它就会在所有模式中开放。</p>
+    </details>
+    <details>
+      <summary>感觉按键时机不太对。</summary>
+      <p>游戏会在你游玩时学习你的按键时机，触控和手柄分别学习。如果想从头来过，请使用“选项 ▸ 校准按键时机”，大约只需 15 秒。</p>
+    </details>
+    <details>
+      <summary>需要联网吗？</summary>
+      <p>不需要。Super-Spike 完全离线运行——无需账号，无需登录。（购买或恢复购买需通过 App Store，只有在那一刻才需要联网。）</p>
+    </details>
+    <details>
+      <summary>我的进度会保存吗？</summary>
+      <p>会。你的进度和设置都保存在设备上。如果开启了 iCloud，你已开放的球场和已完成的教学还会通过你自己的 iCloud 账户，跟随你来到你的其他 iPhone 和 iPad。</p>
+    </details>
+    <details>
+      <summary>必须横屏玩吗？</summary>
+      <p>不必。Super-Spike 支持任意屏幕方向，不过横屏能看到最开阔的球场视野。</p>
+    </details>
+    <details>
+      <summary>支持哪些设备？</summary>
+      <p>任何运行 iOS 18 或更高版本的 iPhone 或 iPad，包括折叠屏 iPhone，折叠或展开均可。</p>
+    </details>
+    <details>
+      <summary>可以提议新功能或新运动员吗？</summary>
+      <p>随时欢迎——发邮件即可。范围小而明确的建议最容易真正落地。</p>
+    </details>
+    </section>
+
+    <section>
+      <h2>还是没解决？</h2>
+      <p>随时来信——每封邮件我都会亲自阅读，并尽快回复。</p>
+    </section>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <p class="label">联系方式</p>
+        <a href="mailto:akavjahcreations@gmail.com">akavjahcreations@gmail.com</a>
+      <p class="addr-label">邮寄地址</p>
+      <p class="addr">Akavjah Creations<br>PO Box 220300<br>Chantilly, VA 20153<br>United States</p>
+      </div>
+      <img class="contact-logo" src="/brand/logo-small.png" alt="Akavjah Creations">
+    </div>
+  </main>
+  <footer class="site">
+    <div class="social"><a href="https://www.instagram.com/akavjahcreations" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://youtube.com/@akavjahcreations" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/share/1EWzXR3XZo/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 8h-1.5a2 2 0 0 0-2 2v2H8v2h2.5v6h2v-6H15l.4-2h-2.9v-1.5a.5.5 0 0 1 .5-.5H14z" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@akavjah.creations" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13 7v7.3a2.3 2.3 0 1 1-1.8-2.24V7H13z" fill="currentColor" stroke="none"/><path d="M13 7c.3 1.5 1.5 2.5 3 2.7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+    <nav class="langs" aria-label="Languages"><a href="../en/" lang="en" hreflang="en">English</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../it/" lang="it" hreflang="it">Italiano</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../pt/" lang="pt-BR" hreflang="pt-BR">Português</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans" aria-current="true">简体中文</a><a href="../zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../ko/" lang="ko" hreflang="ko">한국어</a></nav>
+    <p class="copy">© 2026 Akavjah Creations<sup class="tm">™</sup></p>
+    <p class="tagline">出自一位曾经的怀疑论者之手，一条条提示词打磨而成。</p>
+  </footer>
+</div>
+</body>
+</html>
