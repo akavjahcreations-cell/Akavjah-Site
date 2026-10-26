@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akavjah Creations — Je ne sais pas coder.</title>
-  <meta name="description" content="Akavjah Creations : le journal de bord d'un sceptique du code qui a créé et soumis son premier jeu iOS, Mad Orbit Dash, à la review de l'App Store.">
+  <meta name="description" content="Akavjah Creations : le journal de bord d'un sceptique absolu du code, passé d'un dossier vide à trois jeux sur l'App Store, avec un quatrième, Super-Spike: Ultimate League, bientôt disponible.">
   <link rel="canonical" href="https://www.akavjah.com/fr/">
   <link rel="alternate" hreflang="en" href="https://www.akavjah.com/en/" />
   <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/fr/" />
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
 
   <meta property="og:title" content="Akavjah Creations — Je ne sais pas coder.">
-  <meta property="og:description" content="Akavjah Creations : le journal de bord d'un sceptique du code qui a créé et soumis son premier jeu iOS, Mad Orbit Dash, à la review de l'App Store.">
+  <meta property="og:description" content="Akavjah Creations : le journal de bord d'un sceptique absolu du code, passé d'un dossier vide à trois jeux sur l'App Store, avec un quatrième, Super-Spike: Ultimate League, bientôt disponible.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.akavjah.com/brand/og-homepage.png">
   <meta property="og:image:width" content="1200">
@@ -172,6 +172,8 @@ section.block h2::before{display:none}
   font-size:13.5px; color:var(--muted)}
 .roadmap{display:flex; flex-direction:column; gap:10px; margin-top:22px}
 .roadmap span{border:1px solid var(--line); border-radius:12px; padding:13px 16px; font-size:15px}
+.next-game{margin-top:26px}
+.next-game p{margin:0}
 .roadmap span:first-child{border-color:var(--ring); color:var(--accent)}
 </style>
 </head>
@@ -186,7 +188,7 @@ section.block h2::before{display:none}
       <img class="hero-logo" src="/brand/logo-full.png" alt="Akavjah Creations">
       <p class="eyebrow">Akavjah Creations / Journal des origines</p>
       <h1>Je n'ai jamais écrit une seule ligne de code. <em>Et pourtant, j'ai créé un jeu.</em></h1>
-      <p class="lede">Il y a quelques semaines, je ne croyais pas qu'une IA puisse réellement construire quelque chose d'assez abouti pour être publié — pas une démo, pas un prototype, une vraie appli mise en ligne. Puis j'ai décidé d'en avoir le cœur net, à la dure — un prompt, un crash, une chasse au bug à la fois — pour savoir si quelqu'un qui n'a jamais programmé pouvait passer d'un dossier vide à un vrai compte développeur Apple en six jours chrono.</p>
+      <p class="lede">Il n'y a pas si longtemps, je ne croyais pas qu'une IA puisse réellement construire quelque chose d'assez abouti pour être publié — pas une démo, pas un prototype, une vraie appli mise en ligne. Puis j'ai décidé d'en avoir le cœur net, à la dure — un prompt, un crash, une chasse au bug à la fois — pour savoir si quelqu'un qui n'a jamais programmé pouvait passer d'un dossier vide à un vrai compte développeur Apple en six jours chrono.</p>
       <div class="ctas">
         <a class="btn primary" href="#game">Voir Mad Orbit Dash →</a>
         <a class="btn ghost" href="#log">Lire le journal de bord</a>
@@ -211,7 +213,7 @@ section.block h2::before{display:none}
       <div class="logline"><span class="day">LUN</span><p>Traqué ce bug à travers 33 séries de logs de console avant de le trouver : le jeu laissait l'orbe franchir une porte, puis oubliait tranquillement qu'il pouvait encore mourir une frame plus tard. Corrigé. Le mode démo a enfin atteint le dernier niveau.</p><span class="tag">33 fichiers de logs · une seule vraie cause</span></div>
       <div class="logline"><span class="day">MAR</span><p>Composé et découpé à la main musique et effets sonores originaux — jusqu'à isoler un unique « pop » de 0,35 seconde pour le son du tap, afin qu'il ne fasse pas d'écho.</p><span class="tag">passe audio · sfx_tap.wav, prise 6</span></div>
       <div class="logline"><span class="day">MER</span><p>Ouvert un vrai compte développeur Apple, et obtenu l'approbation.</p><span class="tag">compte développeur · approuvé</span></div>
-      <div class="logline"><span class="day">JEU</span><p>Six jours plus tard : Mad Orbit Dash a été soumis à Apple le 31 juillet. Il est revenu une fois — la mise en page était à l'étroit sur les écrans de l'iPad Air 11 pouces et de l'iPhone 17 Pro Max — il a donc fallu un correctif avant qu'il ne sorte vraiment, puis qu'il ressorte avec un tutoriel, sept langues supplémentaires et un essai gratuit jusqu'au niveau 15.</p><span class="tag">statut : en ligne · v2 sortie</span></div>
+      <div class="logline"><span class="day">JEU</span><p>Six jours plus tard : Mad Orbit Dash a été soumis à Apple le 31 juillet. Il est revenu une fois — la mise en page était à l'étroit sur les écrans de l'iPad Air 11 pouces et de l'iPhone 17 Pro Max — il a donc fallu un correctif avant qu'il ne sorte vraiment, puis qu'il ressorte avec un tutoriel, sept langues supplémentaires et un essai gratuit jusqu'au niveau 15.</p><span class="tag">statut : en ligne · v2 sortie</span></div>
       </div>
     </section>
 
@@ -220,15 +222,24 @@ section.block h2::before{display:none}
       <h2>Mad Orbit Dash</h2>
       <p>Un tap inverse votre orbite. C'est tout le schéma de contrôle. Les anneaux se referment d'autant plus vite que vous survivez longtemps, les brèches se resserrent, et vers le niveau 40, c'est tout le plateau qui bouge contre vous. Il est petit exprès — assez petit pour que chaque défaut soit à moi de le trouver et de le corriger.</p>
       <div class="stats"><div class="stat"><b>50</b><span>niveaux à franchir</span></div><div class="stat"><b>1</b><span>tap pour jouer</span></div><div class="stat"><b>0</b><span>ligne écrite de ma main</span></div></div>
-      <a class="btn primary" href="/games/fr/">Voir les deux jeux →</a>
+      <a class="btn primary" href="/games/fr/">Voir tous les jeux →</a>
       <span class="status-pill" style="margin-left:12px">En ligne sur l'App Store · Deuxième version</span>
     </section>
 
+    <section class="block" id="more-games">
+      <p class="eyebrow">Ce qui a suivi</p>
+      <h2>Et un jeu devint quatre.</h2>
+      <div class="next-game"><p><strong>Fool Me Once.</strong> 100 tableaux, une consigne par tableau, et chacun est conçu pour vous faire faire le mauvais geste. Contraires, doubles négations, couleurs qui trichent. Lisez vite, réfléchissez plus vite encore, et ne vous laissez pas piéger deux fois.</p><span class="status-pill">En ligne sur l'App Store</span></div>
+      <div class="next-game"><p><strong>Memory Castle: Mind Palace.</strong> Un jeu de mémoire fondé sur la méthode des lieux, la technique ancestrale du « palais de mémoire » qu'utilisent les champions de la mémoire. Parcourez 20 salles illustrées, observez où se trouve chaque objet, puis reconstituez chaque salle de mémoire.</p><span class="status-pill">En ligne sur l'App Store</span></div>
+      <div class="next-game"><p><strong>Super-Spike: Ultimate League.</strong> Du beach-volley en 2 contre 2, rapide et spectaculaire. Soignez le timing de chaque réception, passe et smash, déchaînez des coups spéciaux dignes du cinéma et grimpez dans l'Ultimate League à travers six plages, de la Crique du Couchant jusqu'aux aurores du Fjord Boréal.</p><span class="status-pill">Bientôt disponible</span></div>
+    </section>
+
+
     <section class="block">
       <p class="eyebrow">La suite</p>
-      <h2>Deux jeux en ligne. Pourquoi s'arrêter là ?</h2>
-      <p>Mad Orbit Dash était la preuve de concept : que quelqu'un sans aucune expérience du code pouvait mener une idée d'un dossier vide à une appli soumise en six jours. Il est sorti, puis ressorti avec un tutoriel, sept langues supplémentaires et un essai gratuit jusqu'au niveau 15. Fool Me Once a suivi le 24 août. Trois autres jeux sont déjà en chantier.</p>
-      <div class="roadmap"><span>Mad Orbit Dash — En ligne, v2</span><span>Fool Me Once — En ligne</span><span>Trois autres jeux — En développement</span></div>
+      <h2>Trois jeux en ligne. Pourquoi s'arrêter là ?</h2>
+      <p>Mad Orbit Dash était la preuve de concept : que quelqu'un sans aucune expérience du code pouvait mener une idée d'un dossier vide à une appli soumise en six jours. Il est sorti, puis ressorti avec un tutoriel, sept langues supplémentaires et un essai gratuit jusqu'au niveau 15. Fool Me Once a suivi le 24 août, puis Memory Castle le 14 octobre. Prochaine étape : Super-Spike: Ultimate League, un jeu de beach-volley en 2 contre 2 bientôt disponible, et d'autres sont déjà en chantier.</p>
+      <div class="roadmap"><span>Mad Orbit Dash — En ligne, v2</span><span>Fool Me Once — En ligne</span><span>Memory Castle — En ligne</span><span>Super-Spike: Ultimate League — Bientôt disponible</span><span>D'autres jeux — En développement</span></div>
     </section>
 
     <div class="contact-card">

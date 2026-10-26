@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akavjah Creations — コードは書けません。</title>
-  <meta name="description" content="Akavjah Creations：コードにまったく懐疑的だった人間が、初めての iOS ゲーム「Mad Orbit Dash」を作り上げ、App Store の審査に提出するまでの開発ログ。">
+  <meta name="description" content="Akavjah Creations：コードにまったく懐疑的だった人間が、空っぽのフォルダから App Store で3本のゲームを公開するまでの開発ログ。4本目の「Super-Spike: Ultimate League」も近日公開予定です。">
   <link rel="canonical" href="https://www.akavjah.com/ja/">
   <link rel="alternate" hreflang="en" href="https://www.akavjah.com/en/" />
   <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/fr/" />
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
 
   <meta property="og:title" content="Akavjah Creations — コードは書けません。">
-  <meta property="og:description" content="Akavjah Creations：コードにまったく懐疑的だった人間が、初めての iOS ゲーム「Mad Orbit Dash」を作り上げ、App Store の審査に提出するまでの開発ログ。">
+  <meta property="og:description" content="Akavjah Creations：コードにまったく懐疑的だった人間が、空っぽのフォルダから App Store で3本のゲームを公開するまでの開発ログ。4本目の「Super-Spike: Ultimate League」も近日公開予定です。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.akavjah.com/brand/og-homepage.png">
   <meta property="og:image:width" content="1200">
@@ -172,6 +172,8 @@ section.block h2::before{display:none}
   font-size:13.5px; color:var(--muted)}
 .roadmap{display:flex; flex-direction:column; gap:10px; margin-top:22px}
 .roadmap span{border:1px solid var(--line); border-radius:12px; padding:13px 16px; font-size:15px}
+.next-game{margin-top:26px}
+.next-game p{margin:0}
 .roadmap span:first-child{border-color:var(--ring); color:var(--accent)}
 </style>
 </head>
@@ -185,8 +187,8 @@ section.block h2::before{display:none}
     <div class="hero" id="story">
       <img class="hero-logo" src="/brand/logo-full.png" alt="Akavjah Creations">
       <p class="eyebrow">Akavjah Creations / はじまりの記録</p>
-      <h1>コードは一行も書いたことがありません。 <em>それでも、ゲームを作りました。</em></h1>
-      <p class="lede">数週間前まで、AIが本当に、公開できるレベルまで仕上がったものを作れるとは思っていませんでした——デモでも、試作品でもなく、実際に公開されたアプリを。そこで、いちばん確かな方法で確かめることにしたのです。プロンプトを一つ、クラッシュを一つ、バグ捜しを一つずつ——プログラミング経験ゼロの人間が、空っぽのフォルダから本物の Apple デベロッパアカウントまで、きっかり六日間でたどり着けるのかどうかを。</p>
+      <h1>コードは一行も書いたことがありません。<em>それでも、ゲームを作りました。</em></h1>
+      <p class="lede">少し前まで、AIが本当に、公開できるレベルまで仕上がったものを作れるとは思っていませんでした——デモでも、試作品でもなく、実際に公開されたアプリを。そこで、いちばん確かな方法で確かめることにしたのです。プロンプトを一つ、クラッシュを一つ、バグ捜しを一つずつ——プログラミング経験ゼロの人間が、空っぽのフォルダから本物の Apple デベロッパアカウントまで、きっかり六日間でたどり着けるのかどうかを。</p>
       <div class="ctas">
         <a class="btn primary" href="#game">Mad Orbit Dash を見る →</a>
         <a class="btn ghost" href="#log">開発ログを読む</a>
@@ -220,15 +222,24 @@ section.block h2::before{display:none}
       <h2>Mad Orbit Dash</h2>
       <p>タップひとつで軌道が反転する。操作はそれだけです。生き残るほどリングは速く内側へ迫り、隙間は狭くなり、レベル40のあたりからは盤面全体が敵に回ります。小さく作ったのはわざとです——荒削りな部分をひとつ残らず、自分の手で見つけて直せる大きさに。</p>
       <div class="stats"><div class="stat"><b>50</b><span>クリアすべきレベル</span></div><div class="stat"><b>1</b><span>タップだけで遊べる</span></div><div class="stat"><b>0</b><span>自分の手で書いた行数</span></div></div>
-      <a class="btn primary" href="/games/ja/">両方のゲームを見る →</a>
+      <a class="btn primary" href="/games/ja/">すべてのゲームを見る →</a>
       <span class="status-pill" style="margin-left:12px">App Storeで公開中 · 第2版</span>
     </section>
 
+    <section class="block" id="more-games">
+      <p class="eyebrow">その後のこと</p>
+      <h2>1本のゲームが、4本になりました。</h2>
+      <div class="next-game"><p><strong>Fool Me Once.</strong> 全100ステージ、指示はそれぞれひとつだけ。そしてどのステージも、あなたに間違った行動をとらせるために作られています。正反対の指示、二重否定、嘘をつく色。素早く読み、もっと素早く考えて、二度はだまされないように。</p><span class="status-pill">App Storeで公開中</span></div>
+      <div class="next-game"><p><strong>Memory Castle: Mind Palace.</strong> 記憶の達人たちが使う古代の技法「場所法（記憶の宮殿）」をもとにした記憶ゲーム。イラストで描かれた20の部屋を歩き、どこに何が置かれているかを覚えたら、記憶を頼りに各部屋を再現します。</p><span class="status-pill">App Storeで公開中</span></div>
+      <div class="next-game"><p><strong>Super-Spike: Ultimate League.</strong> スピーディーでド派手な2対2のビーチバレー。レシーブ、トス、スパイクをひとつひとつタイミングよく決め、映画のような必殺技を解き放ち、サンセット・コーブからオーロラが揺らめくオーロラ・フィヨルドまで、6つのビーチで Ultimate League を勝ち上がりましょう。</p><span class="status-pill">近日公開</span></div>
+    </section>
+
+
     <section class="block">
       <p class="eyebrow">この先のこと</p>
-      <h2>2本、公開中。ここで終わる理由はありません。</h2>
-      <p>Mad Orbit Dash は実証実験でした。プログラミング経験ゼロの人間でも、アイデアを空のフォルダから提出済みのアプリまで、六日間で持っていけるという。公開後、チュートリアルと7言語の追加、レベル15までの無料お試しを加えて再び公開されました。Fool Me Once は8月24日に続きました。さらに3本のゲームがすでに進行中です。</p>
-      <div class="roadmap"><span>Mad Orbit Dash — 公開中・第2版</span><span>Fool Me Once — 公開中</span><span>さらに3本 — 開発中</span></div>
+      <h2>3本、公開中。ここで終わる理由はありません。</h2>
+      <p>Mad Orbit Dash は実証実験でした。プログラミング経験ゼロの人間でも、アイデアを空のフォルダから提出済みのアプリまで、六日間で持っていけるという。公開後、チュートリアルと7言語の追加、レベル15までの無料お試しを加えて再び公開されました。Fool Me Once が8月24日に、Memory Castle が10月14日に続きました。次は、近日公開予定の2対2ビーチバレーゲーム「Super-Spike: Ultimate League」。さらに多くのゲームが、すでに進行中です。</p>
+      <div class="roadmap"><span>Mad Orbit Dash — 公開中・第2版</span><span>Fool Me Once — 公開中</span><span>Memory Castle — 公開中</span><span>Super-Spike: Ultimate League — 近日公開</span><span>さらなるゲーム — 開発中</span></div>
     </section>
 
     <div class="contact-card">

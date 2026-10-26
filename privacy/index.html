@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akavjah Creations — Privacy Policy</title>
-  <meta name="description" content="Privacy policy for apps published by Akavjah Creations, in 8 languages.">
+  <meta name="description" content="Privacy policy for apps published by Akavjah Creations, in 10 languages.">
   <link rel="canonical" href="https://www.akavjah.com/privacy/">
   <link rel="alternate" hreflang="en" href="https://www.akavjah.com/privacy/en/" />
   <link rel="alternate" hreflang="fr" href="https://www.akavjah.com/privacy/fr/" />
@@ -13,16 +13,18 @@
   <link rel="alternate" hreflang="de" href="https://www.akavjah.com/privacy/de/" />
   <link rel="alternate" hreflang="pt-BR" href="https://www.akavjah.com/privacy/pt/" />
   <link rel="alternate" hreflang="zh-Hans" href="https://www.akavjah.com/privacy/zh/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.akavjah.com/privacy/zh-hant/" />
   <link rel="alternate" hreflang="ja" href="https://www.akavjah.com/privacy/ja/" />
   <link rel="alternate" hreflang="ko" href="https://www.akavjah.com/privacy/ko/" />
   <link rel="alternate" hreflang="x-default" href="https://www.akavjah.com/privacy/en/" />
   <script>
     (function () {
-      var supported = ["en", "fr", "it", "es", "de", "pt", "zh", "ja", "ko"];
+      var supported = ["en", "fr", "it", "es", "de", "pt", "zh", "zh-hant", "ja", "ko"];
       var prefs = navigator.languages || [navigator.language || "en"];
       var match = "en";
       for (var i = 0; i < prefs.length; i++) {
-        var code = String(prefs[i]).toLowerCase().split("-")[0];
+        var full = String(prefs[i]).toLowerCase(); var code = full.split("-")[0];
+        if (code === "zh" && /hant|-tw|-hk|-mo/.test(full)) code = "zh-hant";
         if (supported.indexOf(code) !== -1) { match = code; break; }
       }
       location.replace("./" + match + "/");
@@ -51,6 +53,7 @@
     <li><a href="./de/" lang="de" hreflang="de">Deutsch</a></li>
     <li><a href="./pt/" lang="pt-BR" hreflang="pt-BR">Português</a></li>
     <li><a href="./zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
+    <li><a href="./zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li>
     <li><a href="./ja/" lang="ja" hreflang="ja">日本語</a></li>
     <li><a href="./ko/" lang="ko" hreflang="ko">한국어</a></li>
     </ul>
